@@ -1,0 +1,134 @@
+<style>
+  :root {
+    --block-color: {{ section.settings.color }};
+  }
+</style>
+<section class="product-recipe sm:container px-6 mt-24 md:mt-36 xl:mt-44">
+  <div class="flex flex-wrap -mx-2 lg:-mx-4 xl:-mx-5">
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-2 md:order-1">
+      <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+        <div class="blurb p-7 lg:p-10 xl:p-12">
+          <div class="flex flex-col h-full" data-aos="fade-block">
+            <div class="step flex-shrink sub-title">Step 1.</div>
+            <div class="flex flex-grow items-end">
+              <p>{{ section.settings.step_1 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-1 md:order-2">
+      <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+        <img
+          src="{{ section.settings.image_1 | img_url: 'grande', scale: 2 }}"
+          width="{{ section.settings.image_1.width }}"
+          height="{{ section.settings.image_1.height }}"
+          loading="lazy" class="object-cover w-full h-full"
+        >
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-3">
+      <div class="grid-item aspect-w-8 aspect-h-10 h-full">
+        <img
+          src="{{ section.settings.image_2 | img_url: 'grande', scale: 2 }}"
+          width="{{ section.settings.image_2.width }}"
+          height="{{ section.settings.image_2.height }}"
+          loading="lazy" class="object-cover w-full h-full"
+        >
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-4">
+      <div class="grid-item aspect-w-8 aspect-h-10 h-full">
+        <div class="blurb p-7 lg:p-10 xl:p-12">
+          <div class="flex flex-col h-full" data-aos="fade-block" data-aos-anchor-placement="top-center">
+            <div class="step flex-shrink sub-title">Step 2.</div>
+            <div class="flex flex-grow items-end">
+              <p>{{ section.settings.step_2 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-6 md:order-5">
+      <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+        <div class="blurb p-7 lg:p-10 xl:p-12">
+          <div class="flex flex-col h-full" data-aos="fade-block">
+            <div class="step flex-shrink sub-title">Step 3.</div>
+            <div class="flex flex-grow items-end">
+              <p>{{ section.settings.step_3 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6 order-5 md:order-6">
+      <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+        <img
+          src="{{ section.settings.image_3 | img_url: 'grande', scale: 2 }}"
+          width="{{ section.settings.image_3.width }}"
+          height="{{ section.settings.image_3.height }}"
+          loading="lazy" class="object-cover w-full h-full"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Recipe",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Block Color"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color"
+      },
+      {
+        "type": "header",
+        "content": "Steps"
+      },
+      {
+        "type": "textarea",
+        "id": "step_1",
+        "label": "Step 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image 2"
+      },
+      {
+        "type": "textarea",
+        "id": "step_2",
+        "label": "Step 2"
+      },
+      {
+        "type": "textarea",
+        "id": "step_3",
+        "label": "Step 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image 3"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Recipe"
+      }  
+    ],
+    "templates": [
+      "product"
+    ]
+  }
+{% endschema %}

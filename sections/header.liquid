@@ -1,0 +1,99 @@
+<header class="header">
+  <div class="py-7 relative z-20">
+    <div class="sm:container px-6 flex justify-center header--content-wrapper">
+      <div class="header--logo-container">
+        <a href="/" class="brand hidden lg:block w-12 xl:w-20 mx-auto my-auto header--logo">
+          {% render 'icon-brand' %}
+        </a>
+
+        <span class="header--logo-title">
+          {{ shop.name }}
+        </span>
+      </div>
+
+      <div class="header--menu-container">
+        {%- if section.settings.header_linklist != blank -%}
+          <nav class="max-w-max ml-auto hidden lg:block">
+            <ul class="main-menu">
+              {%- for link in linklists[section.settings.header_linklist].links -%}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+            {%- for link in linklists[section.settings.header_linklist].links -%}
+              {% assign child_list_handle = link.title | handleize %}
+              {%- if linklists[child_list_handle].links != blank and linklists[child_list_handle].title contains 'Flavors' -%}
+                <div class="sub-nav">
+                  <ul class="flex flex-wrap py-4">
+                    {%- for sub_link in link.links -%}
+                      <li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </nav>
+        {%- endif -%}
+
+        <button class="hamburger lg:hidden float-right mr-1 self-center">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav">
+    <nav class="sm:container px-6 pt-44">
+      <ul class="ml-4">
+        {%- for link in linklists[section.settings.header_linklist].links -%}
+          {% assign child_list_handle = link.title | handleize %}
+          {%- if linklists[child_list_handle].links != blank and linklists[child_list_handle].title contains 'Flavors' -%}
+            <li>
+              <button>
+                <span>{{ link.title }}</span>
+                <span class="plus">
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
+              <ul class="flavors-nav">
+                {%- for sub_link in linklists[child_list_handle].links -%}
+                  <li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "header_linklist",
+        "label": "Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "mobile_linklist",
+        "label": "Menu"
+      }
+    ]
+  }
+{% endschema %}

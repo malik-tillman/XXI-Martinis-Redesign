@@ -1,0 +1,105 @@
+<style>
+  .ornament {
+    background-image: url("{{ 'ornament.svg' | asset_url }}");
+    background-repeat: repeat-y;
+    background-size: auto 101%;
+    background-position: top right 15px;
+  }
+</style>
+<section class="hero-home flex flex-wrap min-h-screen bg-gray">
+  <div class="w-full md:w-1/2 min-h-screen relative">
+    <div class="media w-full h-full opacity-40 md:opacity-100">
+      {% if section.settings.show_video == true %}
+        <video
+            class="video object-cover w-full h-full"
+            autoplay muted playsinline
+            {% if section.settings.loop_video == true %}loop{% endif %}
+        >
+          <source src="{{ section.settings.vimeo_link }}">
+        </video>
+      {% else %}
+        <img
+          src="{{ section.settings.image | img_url: 'master', scale: 2 }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+          class="object-cover w-full h-full">
+      {% endif %}
+    </div>
+    <div class="flex md:hidden items-center justify-center absolute z-10 top-0 w-full h-full">
+      <div class="w-28 text-white" data-aos="fade-block">
+        {% render 'icon-lockup' %}
+      </div>
+    </div>
+  </div>
+  <div class="flex place-items-center relative overflow-hidden w-full md:w-1/2 py-48">
+    <div class="sm:container px-6 z-10">
+      <div class="md:px-7 lg:px-14 xl:px-20" data-aos="fade-block">
+        <p class="sub-title mb-5 text-silver">{{ section.settings.heading_prefix | escape }}</p>
+        <p class="title mb-7 text-white">{{ section.settings.heading_main }}</p>
+        <a href="{{ section.settings.button_link | escape }}" class="btn btn--border">
+          {{ section.settings.button_text | escape }}
+        </a>
+      </div>
+    </div>
+    <div class="ornament absolute top-0 w-full h-full rellax"></div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Media"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_video",
+        "label": "Show Video",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "vimeo_link",
+        "label": "Vimeo Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "loop_video",
+        "label": "Loop Video",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Message"
+      },
+      {
+        "type": "text",
+        "id": "heading_prefix",
+        "label": "Heading Prefix"
+      },
+      {
+        "type": "textarea",
+        "id": "heading_main",
+        "label": "Heading Main"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ]
+  }
+{% endschema %}

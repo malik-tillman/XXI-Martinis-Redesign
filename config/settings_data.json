@@ -1,0 +1,68 @@
+{
+  "current": {
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "checkout_layout": "onepage",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement": false,
+          "announcement_bar": "<p>NOW AVAILABLE ONLINE! CLICK <a href=\"https:\/\/www.woodswholesalewine.com\/search?&q=xxi%20martini&type=product\" title=\"https:\/\/www.woodswholesalewine.com\/search?&q=xxi%20martini&type=product\">HERE<\/a> TO ORDER!<\/p>"
+        }
+      },
+      "header": {
+        "type": "header",
+        "custom_css": [
+
+        ],
+        "settings": {
+          "header_linklist": "main-menu-v2",
+          "mobile_linklist": "mobile-menu"
+        }
+      },
+      "instagram-grid": {
+        "type": "instagram-grid",
+        "settings": {
+          "heading_prefix": "The moment won't wait.",
+          "heading_main": "Join us for the party already in progress",
+          "instagram_handle": "@xximartinis",
+          "instagram_link": "https:\/\/www.instagram.com\/xximartinis\/",
+          "image_1": "shopify:\/\/shop_images\/TwoBottles.jpg",
+          "image_2": "shopify:\/\/shop_images\/GlassesPouring.jpg",
+          "image_3": "shopify:\/\/shop_images\/FlowersTable.jpg",
+          "image_4": "shopify:\/\/shop_images\/GameDay.jpg",
+          "image_5": "shopify:\/\/shop_images\/BeachBottle.jpg",
+          "image_6": "shopify:\/\/shop_images\/TwoToast.jpg"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "signup_heading": "Sign up for exclusive XXI mixology tips, recipes, and news.",
+          "contact_heading": "Get in touch",
+          "contact_linklist": "contact-menu",
+          "follow_heading": "Follow",
+          "follow_linklist": "follow-menu",
+          "footer_linklist": "footer"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "15706352229161960306": {
+        "type": "shopify:\/\/apps\/slide-cart-sticky-cart-drawer\/blocks\/app-embeded\/41ace2ee-41e6-45af-a9c4-452e6defecc0",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16278478101612877664": {
+        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  }
+}

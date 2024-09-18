@@ -1,0 +1,166 @@
+{
+  "sections": {
+    "hero-home": {
+      "type": "hero-home",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE14583.jpg",
+        "show_video": false,
+        "vimeo_link": "https:\/\/vimeo.com\/813997867",
+        "loop_video": true,
+        "heading_prefix": "Bottled Perfection",
+        "heading_main": "Delicious premium<br>\nvodka martinis.<br>\nLegendary recipes.<br>\nInstantly enjoyable.",
+        "button_text": "Order online now",
+        "button_link": "https:\/\/www.woodswholesalewine.com\/search?oseid=KkyYUGsB6h24YoXc3FrdC9iv&q=xxi%20martini&type=product"
+      }
+    },
+    "16312901053a94f20e": {
+      "type": "call-to-action",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/feature.jpg",
+        "heading_prefix": "The XXI Martinis Collection",
+        "heading_main": "Flavors for every occasion.<br>\nSimply shake, pour, and sip.<br>\nXXI always wins.",
+        "button_label": "Browse All Flavors",
+        "button_link": "shopify:\/\/collections\/flavors"
+      }
+    },
+    "1631629917f93e5512": {
+      "type": "image-grid",
+      "blocks": {
+        "6bdf80af-63bc-4c0f-933d-d412d635d329": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15122_crop.jpg",
+            "aspect_ratio": "landscape",
+            "message": "Once shaken,<br> always stirred.",
+            "author": ""
+          }
+        },
+        "ef7043ba-9f1e-479a-8916-e5ab34abc5fa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE14461_crop.jpg",
+            "aspect_ratio": "landscape",
+            "message": "",
+            "author": ""
+          }
+        },
+        "ba23ea45-2661-45a2-abb5-b13b1c576be5": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15298_crop.jpg",
+            "aspect_ratio": "portrait",
+            "message": "",
+            "author": ""
+          }
+        },
+        "85919666-86d0-43bb-9103-7e9b9d3a096f": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE13757_crop.jpg",
+            "aspect_ratio": "portrait",
+            "message": "Bright was<br>  \nthe light<br> \nof my last<br> \nmartini<br> \non my<br> \nmoral<br>  \nhorizon.",
+            "author": "Norman Mailer"
+          }
+        },
+        "7d443c49-ac8e-48d5-8693-0af166763d97": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE13420.jpg",
+            "aspect_ratio": "landscape",
+            "message": "That first<br>  \ngorgeous sip<br> \nis waiting.",
+            "author": ""
+          }
+        },
+        "e8be2d7d-37ec-49bd-9cf2-4b47f069a172": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15445.jpg",
+            "aspect_ratio": "landscape",
+            "message": "",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "6bdf80af-63bc-4c0f-933d-d412d635d329",
+        "ef7043ba-9f1e-479a-8916-e5ab34abc5fa",
+        "ba23ea45-2661-45a2-abb5-b13b1c576be5",
+        "85919666-86d0-43bb-9103-7e9b9d3a096f",
+        "7d443c49-ac8e-48d5-8693-0af166763d97",
+        "e8be2d7d-37ec-49bd-9cf2-4b47f069a172"
+      ],
+      "settings": {
+      }
+    },
+    "1631306900414ab879": {
+      "type": "carousel",
+      "blocks": {
+        "42dd3abd-26dd-45f8-982c-e61388c27608": {
+          "type": "slide",
+          "settings": {
+            "text": "Now Serving",
+            "heading_main": "XXI Martinis Now Available nationwide",
+            "message": "In store and online",
+            "button_label": "Find a location near you",
+            "button_link": "shopify:\/\/pages\/where-to-buy"
+          }
+        },
+        "6cc95166-44c5-452a-90b1-b5f9ee613a5f": {
+          "type": "slide",
+          "settings": {
+            "text": "Real love From Real People",
+            "heading_main": "\"Espresso martinis in a bottle? Count us in.\"",
+            "message": "-Inside Hook",
+            "button_label": "Read More",
+            "button_link": "https:\/\/www.insidehook.com\/article\/gear\/products-week-phillys-favorite-drink-olympic-watches-and-very-expensive-basketball"
+          }
+        },
+        "e8aa1f9f-4a1a-441e-896e-26db1ffb9ddd": {
+          "type": "slide",
+          "settings": {
+            "text": "Real Love From Real People",
+            "heading_main": "\"What's good about this spirit? Absolutely everything\"",
+            "message": "- American Distilling Institute, International Spirits Awards 2022",
+            "button_label": "Learn More",
+            "button_link": "https:\/\/www.instagram.com\/p\/CdyTt8Cr4Lf\/"
+          }
+        }
+      },
+      "block_order": [
+        "42dd3abd-26dd-45f8-982c-e61388c27608",
+        "6cc95166-44c5-452a-90b1-b5f9ee613a5f",
+        "e8aa1f9f-4a1a-441e-896e-26db1ffb9ddd"
+      ],
+      "settings": {
+      }
+    },
+    "1631302377eb4d13cf": {
+      "type": "image-banner",
+      "settings": {
+        "message": "Here, we're always<br>\nready to shake.",
+        "show_logo": true,
+        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
+        "show_video": false,
+        "vimeo_link": "https:\/\/player.vimeo.com\/external\/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&amp;profile_id=175",
+        "loop_video": false
+      }
+    },
+    "16312881435c819a53": {
+      "type": "call-to-action",
+      "settings": {
+        "heading_prefix": "Thirsty for more?",
+        "heading_main": "Ask for XXI at your favorite<br>\nrestaurant, bar, or liquor store.",
+        "button_label": "Find a location near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    }
+  },
+  "order": [
+    "hero-home",
+    "16312901053a94f20e",
+    "1631629917f93e5512",
+    "1631306900414ab879",
+    "1631302377eb4d13cf",
+    "16312881435c819a53"
+  ]
+}

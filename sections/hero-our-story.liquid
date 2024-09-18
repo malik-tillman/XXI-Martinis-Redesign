@@ -1,0 +1,53 @@
+<section class="hero-our-story flex md:min-h-screen pt-44 xl:pt-52 pb-24 md:pb-36 bg-gray">
+  <div class="flex flex-wrap items-center w-full min-h-full md:container px-6">
+    <div class="mx-auto text-white text-center">
+      <div class="stagger">
+        <p class="title">
+          In every gathering,<br> 
+          big or small,<br> 
+          mundane or magnificent,<br> 
+          there's a moment we live for.<br> 
+          When the music drops.<br> 
+          When the light turns golden.<br> 
+          When conversation becomes connection.
+        </p>
+      </div>
+      <div class="stagger mt-16">
+        <p class="sub-title">That moment is</p>
+      </div>
+      <div class="stagger parallax-logo mt-6 relative">
+        <div class="relative z-10">
+          {% render 'logo-txxentyi' %}
+        </div>
+        <div class="absolute top-0 w-full h-full">
+          <div class="parallax-bottom">
+            {% render 'logo-xxi' %}
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-block" data-aos-delay="2000">
+        <p class="title mt-36 sm:mt-48 lg:mt-60">
+          XXI is desire fulfilled, thirst quenched,<br>
+          blackjack won, party in full gear.
+        </p>
+        <p class="default mt-10">
+          Twenty-One Martinis is a collection of flavored martinis.<br>
+          Shaken, chilled or over ice they become a magic elixir.<br>
+          Refreshingly cold, subtly sweet, and unapologetically bold.<br>
+          That first gorgeous sip is waiting.
+        </p>
+        <div class="mt-12 mx-auto max-w-md">
+          {% render 'signature' %}
+        </div>
+        <p class="sub-title mt-6"> Angelo & Shannon</p>
+        <p class="mt-1"><em>Friends, Founders, Martini Enthusiasts</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Hero"
+  }
+{% endschema %}

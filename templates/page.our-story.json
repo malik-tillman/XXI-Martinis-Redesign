@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "hero-our-story": {
+      "type": "hero-our-story",
+      "settings": {
+      }
+    },
+    "16315622182211da2f": {
+      "type": "image-banner",
+      "settings": {
+        "message": "Here, we're always<br> ready to shake.",
+        "show_logo": true,
+        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15481.jpg",
+        "show_video": false,
+        "vimeo_link": "",
+        "loop_video": false
+      }
+    },
+    "16316487690524660b": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/11022021-XXIMartinisLaunchDay2-LIFESTYLE15788_crop.jpg",
+        "image_alignment": "left",
+        "heading_prefix": "Our Story",
+        "heading_main": "A Guy Walks Into A Bar",
+        "content": "<p>We believe that great martinis, great friendships, and great occasions follow a similar recipe. The right ingredients, the right mindset, the right chemistry, and a splash of alchemy.<\/p><p>When Shannon walked into the Bellagio’s Club Privé and sat down at the bar, he couldn’t have predicted that Angelo, the legendary head bartender, would become his favorite mixologist, his friend, and his business partner.<\/p><p>But sometimes, life gives us just the magic we need.<\/p>"
+      }
+    },
+    "1631549417449cc562": {
+      "type": "text-banner",
+      "settings": {
+        "message": "What sounds like the opening of a great joke is actually, in the words of Humphrey Bogart, \"The beginning of a beautiful friendship.\""
+      }
+    },
+    "1631648820e5ba6133": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15009_crop.jpg",
+        "image_alignment": "right",
+        "heading_prefix": "A splash of alchemy",
+        "heading_main": "A martini becomes magic",
+        "content": "<p>One particularly late night, Shannon, usually a bourbon drinker, asked Angelo for a “pick me up.” <\/p><p><\/p><p>Angelo smiled and soon, the unmistakable aroma of freshly brewed espresso filled the air. He lifted a sparkling silver shaker overhead and began the vigorous agitation, the magnificent mixing that would culminate in dark, frothy, magical elixir. Angelo poured the shaker's delicious contents into the ice-cold glass before Shannon. As if waving a magic wand, Angelo softly dusted the martini's surface with chocolate powder.<\/p><p><\/p><p>He smiled again, stepped back, and waited.<\/p><p><\/p><p>Shannon sipped the martini — perfectly cold, subtly sweet, decadent, and unapologetically bold. When he could finally speak, Shannon said, “This is amazing. We have to bottle this!”<\/p><p><\/p><p>That’s the magic of a moment.<br\/><\/p>"
+      }
+    },
+    "1631549385b7d10e31": {
+      "type": "text-banner",
+      "settings": {
+        "message": "Great martinis, great friendships, and great occasions follow a similar recipe."
+      }
+    },
+    "163163338743f10958": {
+      "type": "image-grid",
+      "blocks": {
+        "766ea431-9f5f-42a5-9d30-4d731283f61e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE14180.jpg",
+            "aspect_ratio": "landscape",
+            "message": "Once shaken<br>\nalways stirred.",
+            "author": ""
+          }
+        },
+        "9f21431f-324f-4016-b9a3-320d6dcc3a1f": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11012021---XXI-Martinis-Launch-Day-1---LIFESTYLE14144.jpg",
+            "aspect_ratio": "landscape",
+            "message": "",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "766ea431-9f5f-42a5-9d30-4d731283f61e",
+        "9f21431f-324f-4016-b9a3-320d6dcc3a1f"
+      ],
+      "settings": {
+      }
+    },
+    "16315466852a915f3e": {
+      "type": "press-carousel",
+      "blocks": {
+        "1ec91c71-355a-4031-8a48-dbac8eedbedb": {
+          "type": "slide",
+          "settings": {
+            "quote_prefix": "Real love from real people",
+            "quote_main": "\"XXI Martinis is an emerging ready-to-shake cocktail line that’s changing the way we drink.\"",
+            "quote_author": "Bar & Restaurant Expo",
+            "press_name": "",
+            "press_link": "https:\/\/www.barandrestaurant.com\/sponsored\/bid-beverage-solving-espresso-martini-problem"
+          }
+        },
+        "ec3a9d3c-0c2e-4def-8196-feb3291c416a": {
+          "type": "slide",
+          "settings": {
+            "quote_prefix": "Real Love From Real People",
+            "quote_main": "\"Espresso martinis in a bottle? Count us in.\"",
+            "quote_author": "Inside Hook",
+            "press_name": "",
+            "press_link": "https:\/\/www.insidehook.com\/article\/gear\/products-week-phillys-favorite-drink-olympic-watches-and-very-expensive-basketball"
+          }
+        }
+      },
+      "block_order": [
+        "1ec91c71-355a-4031-8a48-dbac8eedbedb",
+        "ec3a9d3c-0c2e-4def-8196-feb3291c416a"
+      ],
+      "settings": {
+      }
+    },
+    "1631547886b8962194": {
+      "type": "call-to-action",
+      "settings": {
+        "heading_prefix": "Thirsty for more?",
+        "heading_main": "Ask for XXI at your favorite<br>restaurant, bar, or liquor store.",
+        "button_label": "Find a location near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    }
+  },
+  "order": [
+    "hero-our-story",
+    "16315622182211da2f",
+    "16316487690524660b",
+    "1631549417449cc562",
+    "1631648820e5ba6133",
+    "1631549385b7d10e31",
+    "163163338743f10958",
+    "16315466852a915f3e",
+    "1631547886b8962194"
+  ]
+}

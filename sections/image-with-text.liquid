@@ -1,0 +1,82 @@
+<section class="image-with-text sm:container px-6 mt-24 md:mt-36 xl:mt-44">
+  {% if section.settings.image_alignment == 'right' %}
+    <div class="flex flex-wrap text-right">
+  {% else %}
+    <div class="flex flex-wrap">
+  {% endif %}
+    {% if section.settings.image_alignment == 'right' %}
+      <div class="md:order-2 w-full md:w-1/2">
+    {% else %}
+      <div class="w-full md:w-1/2">  
+    {% endif %}
+      <img
+        src="{{ section.settings.image | img_url: 'grande', scale: 2 }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+        class="object-cover w-full h-full">
+    </div>
+    {% if section.settings.image_alignment == 'right' %}
+      <div class="md:order-1 w-full md:w-1/2 py-10 md:py-8 md:pr-8 lg:py-12 lg:pr-12 lg:pl-6 xl:pr-16">
+    {% else %}
+      <div class="w-full md:w-1/2 py-10 md:py-8 md:pl-8 lg:py-12 lg:pl-12 lg:pr-6 xl:pl-16"> 
+    {% endif %}
+      <div class="flex flex-col h-full place-content-center" data-aos="fade-block">
+        <div class="sub-title">{{ section.settings.heading_prefix }}</div>
+        <p class="title my-3">{{ section.settings.heading_main }}</p>
+        <div class="rte">
+          {{ section.settings.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image With Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "image_alignment",
+        "label": "Image Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "heading_prefix",
+        "label": "Heading Prefix"
+      },
+      {
+        "type": "text",
+        "id": "heading_main",
+        "label": "Heading Main"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image With Text"
+      }  
+    ]
+  }
+{% endschema %}

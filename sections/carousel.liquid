@@ -1,0 +1,89 @@
+<section class="carousel pb-10 mt-24 md:mt-36 xl:mt-44">
+  {% for block in section.blocks %}
+    <div class="slide flex items-center w-full min-h-full md:w-7/12 mr-3 md:mr-4 xl:mr-6 overflow-hidden bg-gray">
+      <div class="sm:container px-6 sm:px-12 sm:px-24 md:px-20 xl:px-24 py-32 text-center">
+        <div data-aos="fade-block">
+          <div class="sub-title">{{ block.settings.text | escape }}</div>
+          <p class="title mt-6">{{ block.settings.heading_main }}</p>
+          <p class="mt-5">{{ block.settings.message }}</p>
+          {%- if block.settings.button_link -%}
+            <a href="{{ block.settings.button_link }}" class="btn btn--border mt-8">
+              {{ block.settings.button_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="carousel-ticker absolute ticker-top">
+        <div class="ticker-wrap flex justify-start overflow-hidden">
+          <div class="ticker-list tick-left flex">
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-ticker absolute ticker-bottom">
+        <div class="ticker-wrap flex justify-end overflow-hidden">
+          <div class="ticker-list tick-right flex">
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+            <div class="ticker-item">{% render 'ticker-symbol' %}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% schema %}
+  {
+    "name": "Carousel",
+    "blocks": [
+      {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "text",
+           "id": "text",
+           "label": "Heading Prefix"
+         },
+         {
+           "type": "textarea",
+           "id": "heading_main",
+           "label": "Heading Main"
+         },
+         {
+           "type": "textarea",
+           "id": "message",
+           "label": "Message"
+         },
+         {
+           "type": "text",
+           "id": "button_label",
+           "label": "Button Label"
+         },
+         {
+           "type": "url",
+           "id": "button_link",
+           "label": "Button Label"
+         }
+       ]
+     }  
+    ],
+    "presets": [
+      {
+        "name": "Carousel"
+      }  
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "video_banner_wKndA4": {
+      "type": "video-banner",
+      "custom_css": [
+        "video {padding-top: 170px;}"
+      ],
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/Party30sec_V1small.mp4",
+        "heading_prefix": "Bottled Perfection",
+        "heading_main": "Delicious premium<br>\nvodka martinis.<br>\nLegendary recipes.<br>\nInstantly enjoyable.",
+        "button_label": "Find it Near You",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "video_banner_wKndA4"
+  ]
+}

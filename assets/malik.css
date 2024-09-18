@@ -1,0 +1,67 @@
+#kaktusc-cart-icon {
+  display: none;
+}
+
+#shopify-section-header .header {
+  background: transparent;
+}
+#shopify-section-header .header .header--content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#shopify-section-header .header .header--content-wrapper .header .main-menu {
+  margin-top: 0;
+}
+#shopify-section-header .header .header--content-wrapper .header--logo-container {
+  display: flex;
+  align-items: center;
+}
+#shopify-section-header .header .header--content-wrapper .header--logo-container .header--logo {
+  width: 100px;
+  height: 100px;
+}
+#shopify-section-header .header .header--content-wrapper .header--logo-container .header--logo-title {
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-sweet-sans), serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1875rem;
+  text-transform: uppercase;
+  transition: border-color 0.3s ease;
+  color: white;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: -10px;
+}
+#shopify-section-header .header .header--content-wrapper .header--menu-container {
+  display: flex;
+  gap: 25px;
+}
+#shopify-section-header .header .header--content-wrapper .header--menu-container #kaktusc-cart-icon {
+  display: block;
+  position: relative;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  width: unset;
+  height: unset;
+  background: unset;
+  border-radius: unset;
+  margin: 0;
+}
+#shopify-section-header .header .header--content-wrapper .header--menu-container #kaktusc-cart-icon .kaktusc-cart-icon-number {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  right: -14px;
+}
+#shopify-section-header .header .header--content-wrapper .header--menu-container #kaktusc-cart-icon .kaktusc-cart-icon-wrap {
+  height: unset;
+}
+
+/*# sourceMappingURL=malik.css.map */

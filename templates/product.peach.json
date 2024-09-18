@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "product-description": {
+      "type": "product-description",
+      "settings": {
+        "product_prefix": "The XXI Martini Collection",
+        "button_label": "Where to Buy",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    },
+    "1631644112be98b692": {
+      "type": "product-features",
+      "blocks": {
+        "0503d0fe-6d4e-481c-92b4-f2fa4b79a0a0": {
+          "type": "feature",
+          "settings": {
+            "text": "Ready<br>\nto<br>\nDrink"
+          }
+        },
+        "1d7972c4-2068-40b8-bb47-0f733c72c436": {
+          "type": "feature",
+          "settings": {
+            "text": "Premium<br>\nVodka"
+          }
+        },
+        "6275aa8a-cae9-443d-b1bb-9a6dbfd85b1e": {
+          "type": "feature",
+          "settings": {
+            "text": "30 Proof<br>\n15% ABV"
+          }
+        },
+        "1a951446-c977-44b1-8610-435e398f17d0": {
+          "type": "feature",
+          "settings": {
+            "text": "Gluten<br>\nFree"
+          }
+        }
+      },
+      "block_order": [
+        "0503d0fe-6d4e-481c-92b4-f2fa4b79a0a0",
+        "1d7972c4-2068-40b8-bb47-0f733c72c436",
+        "6275aa8a-cae9-443d-b1bb-9a6dbfd85b1e",
+        "1a951446-c977-44b1-8610-435e398f17d0"
+      ],
+      "settings": {
+      }
+    },
+    "1631634619a1ecb3f0": {
+      "type": "product-recipe",
+      "settings": {
+        "color": "#f9a36d",
+        "step_1": "Shake XXI Peach Martini with ice",
+        "image_1": "shopify:\/\/shop_images\/XXI_Peach_Shake_gif.gif",
+        "image_2": "shopify:\/\/shop_images\/05032022-XXISummerFlavors-LIFESTYLE3676.jpg",
+        "step_2": "Strain into<br>\na martini or highball glass",
+        "step_3": "Garnish with a fresh mint leaf. Enjoy.",
+        "image_3": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15952_76c349c0-b21a-441c-ba4e-44348eb93da5.jpg"
+      }
+    },
+    "product-ticker": {
+      "type": "product-ticker",
+      "blocks": {
+        "4130f823-aab6-487b-8205-9319877533a8": {
+          "type": "message",
+          "settings": {
+            "text": "Serve it on the rocks."
+          }
+        },
+        "e2c8215b-aa30-407e-a9df-720fa7c35cab": {
+          "type": "message",
+          "settings": {
+            "text": "Blend with ice for a fresh, fruity frappé."
+          }
+        },
+        "b0df5a25-4c98-4771-af98-5f7ed954f7f7": {
+          "type": "message",
+          "settings": {
+            "text": "Drizzle over ice cream or sorbet for a sweet treat."
+          }
+        }
+      },
+      "block_order": [
+        "4130f823-aab6-487b-8205-9319877533a8",
+        "e2c8215b-aa30-407e-a9df-720fa7c35cab",
+        "b0df5a25-4c98-4771-af98-5f7ed954f7f7"
+      ],
+      "settings": {
+        "title": "Other Ways to Enjoy",
+        "color": "",
+        "button_label": "How do you enjoy XXI?",
+        "button_link": "mailto:info@xximartinis.com"
+      }
+    },
+    "1631561999273bc7fc": {
+      "type": "image-banner",
+      "settings": {
+        "message": "Just peachy, just right.",
+        "show_logo": true,
+        "image": "shopify:\/\/shop_images\/05032022-XXISummerFlavors-LIFESTYLE3942.jpg",
+        "show_video": false,
+        "vimeo_link": "",
+        "loop_video": false
+      }
+    },
+    "16315619576747ba20": {
+      "type": "call-to-action",
+      "settings": {
+        "heading_prefix": "Thirsty for more?",
+        "heading_main": "Ask for XXI at your favorite<br> restaurant, bar, or liquor store.",
+        "button_label": "Find a location near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    }
+  },
+  "order": [
+    "product-description",
+    "1631644112be98b692",
+    "1631634619a1ecb3f0",
+    "product-ticker",
+    "1631561999273bc7fc",
+    "16315619576747ba20"
+  ]
+}

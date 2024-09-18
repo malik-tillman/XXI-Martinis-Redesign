@@ -1,0 +1,82 @@
+#kaktusc-cart-icon {
+  display: none;
+}
+
+#shopify-section-header .header {
+  background: transparent;
+
+  .header--content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header .main-menu {
+      margin-top: 0;
+    }
+
+    .header--logo-container {
+      display: flex;
+      align-items: center;
+
+      .header--logo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .header--logo-title {
+        cursor: pointer;
+        display: inline-block;
+        font-family: var(--font-sweet-sans), serif;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .1875rem;
+        text-transform: uppercase;
+        transition: border-color .3s ease;
+        color: white;
+
+        line-height: 1;
+
+        padding: 0;
+        margin: 0;
+
+        position: relative;
+        left: -10px;
+      }
+    }
+
+    .header--menu-container {
+      display: flex;
+      gap: 25px;
+
+      #kaktusc-cart-icon {
+        display: block;
+        position: relative;
+        top: unset;
+        right: unset;
+        bottom: unset;
+        left: unset;
+
+        width: unset;
+        height: unset;
+
+        background: unset;
+        border-radius: unset;
+
+        margin: 0;
+
+        .kaktusc-cart-icon-number {
+          width: 15px;
+          height: 15px;
+          font-size: 12px;
+          right: -14px;
+        }
+
+        .kaktusc-cart-icon-wrap {
+          height: unset;
+        }
+      }
+    }
+  }
+}
+
+

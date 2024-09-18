@@ -1,0 +1,132 @@
+<section class="image-grid sm:container px-6 mt-24 md:mt-36 xl:mt-44">
+  <div class="flex flex-wrap -mx-2 lg:-mx-4 xl:-mx-5">
+    {% for block in section.blocks %}
+      <div class="w-full md:w-1/2 p-3 md:p-4 xl:p-6">
+      {% if block.settings.aspect_ratio == 'landscape' %}
+        <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+    {% elsif block.settings.aspect_ratio == 'portrait' %}
+        <div class="grid-item aspect-w-8 aspect-h-10 h-full">
+    {% elsif block.settings.aspect_ratio == 'tall' %}
+        <div class="grid-item aspect-w-9 aspect-h-16 h-full">
+    {% endif %}
+    
+    {% if block.settings.video %}
+            <video
+              width="100%"
+              height="auto"
+              autoplay
+              muted
+              loop
+              loading="lazy"
+              class="absolute inset-0 w-full h-full object-cover relative overflow-hidden aspect-w-9 aspect-h-16"
+            >
+              <source src="{{ block.settings.video.sources[1].url }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+    {% elsif block.settings.image %}
+        <img
+          src="{{ block.settings.image | img_url: 'grande', scale: 2 }}"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          loading="lazy" class="object-cover w-full h-full"
+        >
+    {% endif %}    
+            
+          {% if block.settings.message != blank %}
+            <div class="blurb {% if block.settings.aspect_ratio == 'tall' %}absolute inset-0{% else %}flex items-end{% endif %} p-7 lg:p-10 xl:p-12">
+              <div class="animate" data-aos="fade-block">
+                <p>{{ block.settings.message }}</p>
+                {% if block.settings.author != blank %}
+                  <div class="credit mt-4">
+                    {{ block.settings.author }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if block.settings.message != blank %}
+        <div class="md:hidden w-full md:w-1/2 p-3 md:p-4 xl:p-6">
+          {% if block.settings.aspect_ratio == 'landscape' %}
+            <div class="grid-item aspect-w-8 aspect-h-5 h-full">
+          {% elsif block.settings.aspect_ratio == 'portrait' %}
+            <div class="grid-item aspect-w-8 aspect-h-10 h-full">
+          {% elsif block.settings.aspect_ratio == 'tall' %}
+            <div class="grid-item aspect-w-9 aspect-h-16 h-full">
+          {% endif %}
+            <div class="blurb blurb--static flex items-end p-7 lg:p-10 xl:p-12">
+              <div data-aos="fade-block">
+                <p>{{ block.settings.message }}</p>
+                {% if block.settings.author != blank %}
+                  <div class="credit mt-4">
+                    {{ block.settings.author }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+    {
+  "name": "Image Grid",
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "select",
+          "id": "aspect_ratio",
+          "label": "Aspect Ratio",
+          "options": [
+            {
+              "value": "landscape",
+              "label": "Landscape"
+            },
+            {
+              "value": "portrait",
+              "label": "Portrait"
+            },
+            {
+              "value": "tall",
+              "label": "Tall"
+            }
+          ]
+        },
+        {
+          "type": "textarea",
+          "id": "message",
+          "label": "Message"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Grid"
+    }
+  ]
+}
+
+  {% endschema %}

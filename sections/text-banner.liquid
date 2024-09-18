@@ -1,0 +1,34 @@
+<style>
+  @media (min-width: 768px) {
+    .text-banner {
+      background-image: url("{{ 'ornament.svg' | asset_url }}");
+      background-repeat: no-repeat;
+      background-position: right 50px center;
+      background-size: 300px auto;
+    }
+  }
+</style>
+<section class="text-banner mt-24 md:mt-36 xl:mt-44 bg-gray">
+  <div class="sm:container px-6 py-20 md:py-24 md:px-18 lg:py-32 lg:px-28 xl:py-36 xl:px-28 2xl:px-60">
+    <div class="title text-center text-white" data-aos="fade-block">
+      {{ section.settings.message }}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Text Banner",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "message",
+        "label": "Message"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Banner"
+      }  
+    ]
+  }
+{% endschema %}

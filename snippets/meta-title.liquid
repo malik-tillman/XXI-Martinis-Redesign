@@ -1,0 +1,11 @@
+{%- capture meta_title -%}
+  {{ page_title }}
+  {%- if current_page != 1 -%}
+    &ndash; {{ 'general.meta.page' }}
+  {%- endif -%}
+  {%- assign escaped_page_title = page_title | escape -%}
+  {%- unless escaped_page_title contains shop.name -%}
+    &ndash; {{ shop.name }}
+  {%- endunless -%}
+{%- endcapture -%}
+<title>{{ meta_title | strip }}</title>

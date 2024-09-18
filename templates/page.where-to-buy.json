@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "437f1385-c929-4b67-9c0b-d1a2c5a2d939": {
+      "type": "call-to-action",
+      "disabled": true,
+      "settings": {
+        "heading_prefix": "Straight to your door!",
+        "heading_main": "Now available online",
+        "button_label": "Click here to purchase",
+        "button_link": "https:\/\/www.woodswholesalewine.com\/search?oseid=KkyYUGsB6h24YoXc3FrdC9iv&q=xxi%20martini&type=product"
+      }
+    },
+    "product-locator": {
+      "type": "product-locator",
+      "custom_css": [
+        "{padding-top: 18px;}"
+      ],
+      "settings": {
+        "heading_prefix": "Find XXI Martinis Near You",
+        "heading_main": "Ready to Shake?",
+        "content": "<p>We do our utmost to keep our locator up-to-date. Can’t find us? Ask for XXI at your favorite restaurant, bar, and grocery store, or <a href=\"mailto:info@xximartinis.com\" target=\"_blank\" title=\"mailto:info@xximartinis.com\">contact us<\/a>, so we can bring XXI to your area.<\/p>",
+        "locator_plugin": "<div id=\"storepoint-container\" data-map-id=\"161f04b83d903e\"><\/div><script>(function(){var a=document.createElement(\"script\");a.type=\"text\/javascript\";a.async=!0;a.src=\"https:\/\/cdn.storepoint.co\/api\/v1\/js\/161f04b83d903e.js\";var b=document.getElementsByTagName(\"script\")[0];b.parentNode.insertBefore(a,b);}());<\/script>"
+      }
+    }
+  },
+  "order": [
+    "437f1385-c929-4b67-9c0b-d1a2c5a2d939",
+    "product-locator"
+  ]
+}

@@ -1,0 +1,59 @@
+<style>
+  .product-features .grid-item {
+    background-image:
+      url("{{ 'frame-feat-top-left.svg' | asset_url }}"),
+      url("{{ 'frame-feat-top-right.svg' | asset_url }}"),
+      url("{{ 'frame-feat-bottom-right.svg' | asset_url }}"),
+      url("{{ 'frame-feat-bottom-left.svg' | asset_url }}"),
+      url("{{ 'frame-feat-top.svg' | asset_url }}"),
+      url("{{ 'frame-feat-right.svg' | asset_url }}"),
+      url("{{ 'frame-feat-bottom.svg' | asset_url }}"),
+      url("{{ 'frame-feat-left.svg' | asset_url }}");
+    background-repeat:
+      no-repeat, no-repeat, no-repeat, no-repeat,
+      repeat-x, repeat-y, repeat-x, repeat-y;
+    background-size:
+      76px 56px, 76px 56px, 76px 56px, 76px 56px,
+      56px 56px, 56px 56px, 56px 56px, 56px 56px;
+    background-position:
+      top left, top right, bottom right, bottom left,
+      top, right, bottom, left;
+  }
+</style>
+<section class="product-features sm:container px-6 mt-24 md:mt-36 xl:mt-44">
+  <div class="product-features__overflow grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    {% for block in section.blocks %}
+      <div class="grid-item aspect-w-1 aspect-h-1" data-aos="fade-block">
+        <div class="flex items-center justify-center p-6">
+          {{ block.settings.text }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Product Features",
+    "blocks": [
+      {
+        "name": "Feature",
+        "type": "feature",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Features"
+      }  
+    ],
+    "templates": [
+      "product"
+    ]
+  }
+{% endschema %}

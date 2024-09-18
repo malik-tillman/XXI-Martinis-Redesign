@@ -1,0 +1,88 @@
+<style>
+  .age-gate {
+    position: fixed;
+    z-index: 9998;
+    inset: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .age-gate .frame {
+      min-height: 550px;
+      background-image:
+        url('{{ 'frame-age-top-left.svg' | asset_url }}'),
+        url('{{ 'frame-age-top-right.svg' | asset_url }}'),
+        url('{{ 'frame-age-bottom-right.svg' | asset_url }}'),
+        url('{{ 'frame-age-bottom-left.svg' | asset_url }}'),
+        url('{{ 'frame-age-top.svg' | asset_url }}'),
+        url('{{ 'frame-age-right.svg' | asset_url }}'),
+        url('{{ 'frame-age-bottom.svg' | asset_url }}'),
+        url('{{ 'frame-age-left.svg' | asset_url }}');
+      background-repeat:
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        repeat-x, repeat-y, repeat-x, repeat-y;
+      background-size: 150px auto;
+      background-position:
+        top left, top right, bottom right, bottom left,
+        top, right, bottom, left;
+    }
+  }
+
+  .not-legal {
+    font-family: var(--font-sweet-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.1875rem;
+    color: var(--color-silver);
+  }
+
+  @media (min-width: 1024px) {
+    .not-legal {
+      font-size: 0.875rem;
+    }
+  }
+
+  .not-legal:hover {
+    text-decoration: none;
+  }
+</style>
+
+<div class="age-gate bg-gray p-12 text-center text-white">
+  <div class="frame flex flex-col items-center justify-center w-full h-full">
+    <div class="w-20 md:w-24">{% render 'icon-lockup' %}</div>
+    <p class="title mt-10">Are you 21 or older?</p>
+    <button class="legal btn btn--border mt-10">Yes, I'm ready to shake</button>
+    <a href="https://google.com" class="not-legal mt-6">No, I'm not of legal drinking age.</a>
+  </div>
+</div>
+<script>
+  const body = document.querySelector('body');
+  const ageGate = document.querySelector('.age-gate');
+  const legal = document.querySelector('.legal');
+
+  function fadeOut(el) {
+    el.style.opacity = 1;
+    (function fade() {
+      if ((el.style.opacity -= .05) < 0) {
+        el.style.display = "none";
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  };
+
+  if (localStorage.getItem('legal') === 'yes') {
+    body.removeAttribute('style');
+    ageGate.style.display = 'none';
+  } else {
+    body.style.overflow = 'hidden';
+    legal.addEventListener('click', function() {
+      localStorage.setItem('legal', 'yes');
+      body.removeAttribute('style');
+      fadeOut(ageGate);
+    });
+  }
+</script>

@@ -1,0 +1,25 @@
+{%- if section.settings.show_announcement == true -%}
+<div class="announcement-bar bg-silver px-3 py-1.5 xl:py-2">
+  <div class="text-gray text-center text-sm xl:text-base tracking-wide">
+    {{ section.settings.announcement_bar }}
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Announcement Bar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show Announcement"
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_bar",
+        "label": "Message"
+      }
+    ]
+  }
+{% endschema %}

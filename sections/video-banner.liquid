@@ -1,0 +1,72 @@
+<section class="video-banner relative flex flex-wrap min-h-screen">
+  <div class="w-full relative">
+    <div class="image relative">
+      {% if section.settings.video %}
+        <video
+          class="video object-cover w-full h-full absolute inset-0 w-full h-full object-cover relative overflow-hidden"
+          playsinline
+          width="100%"
+          height="auto"
+          autoplay
+          muted
+          loop
+          loading="lazy"
+        >
+          <source src="{{ section.settings.video.sources[1].url }}">
+        </video>
+
+
+      <div class="message absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+        <div data-aos="fade-block">
+          <div class="sub-title" style="color:white;">{{ section.settings.heading_prefix | escape }}</div>
+          <p class="title mt-6" style="color:white;">{{ section.settings.heading_main }}</p>
+          {%- if section.settings.button_link -%}
+            <a href="{{ section.settings.button_link }}" class="btn btn--border mt-8">
+              {{ section.settings.button_label }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    {% endif %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Video Banner",
+    "settings": [
+      {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+        },
+      {
+        "type": "text",
+        "id": "heading_prefix",
+        "label": "Heading Prefix"
+      },
+      {
+        "type": "textarea",
+        "id": "heading_main",
+        "label": "Heading Main"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video Banner"
+      }  
+    ]
+  }
+{% endschema %}

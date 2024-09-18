@@ -1,0 +1,56 @@
+<style>
+  .product-locator a {
+    text-decoration: underline;
+    color: var(--color-silver);
+    transition: all 300ms ease;
+  }
+
+  .product-locator a:hover {
+    color: #fff;
+  }
+</style>
+
+<section class="product-locator md:min-h-screen pt-44 xl:pt-52 pb-24 md:pb-36 bg-gray">
+  <div class="flex flex-wrap items-center w-full min-h-full md:container px-6">
+    <div class="mx-auto text-white">
+      <div class="message sm:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto text-center">
+        <div data-aos="fade-block">
+          <p class="sub-title mb-6">{{ section.settings.heading_prefix }}</p>
+          <h2 class="title mb-1">{{ section.settings.heading_main }}</h2>
+          {{ section.settings.content }}
+        </div>
+      </div>
+    </div>
+    <div class="w-full mt-16 lg:mt-24">
+      {{ section.settings.locator_plugin }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Locator",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_prefix",
+        "label": "Heading Prefix"
+      },
+      {
+        "type": "text",
+        "id": "heading_main",
+        "label": "Heading Main"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "liquid",
+        "id": "locator_plugin",
+        "label": "Locator Plugin"
+      }
+    ]
+  }
+{% endschema %}

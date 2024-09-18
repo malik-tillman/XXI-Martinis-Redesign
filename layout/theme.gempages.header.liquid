@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+ {%- render 'ecom_header' -%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    {% render 'meta-title' %}
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    {% render 'meta-tags' %}
+    {% render 'favicon' %}
+    <script src="{{ 'bundle.main.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/jps2fkb.css">
+    {{ 'bundle.main.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'pagefly-app-header' %}{% render 'gp-head' %}
+</head>
+  <body class="flex flex-col min-h-screen antialiased {{ template }} {{ collection.handle }}">
+    <div class="overlay"></div>
+    {% render 'age-gate' %}
+    <div class="header-wrap fixed w-full">
+      {% section 'announcement-bar' %}
+      {% section 'header' %}
+    </div>
+    <main id="MainContent" class="flex-grow">
+      {{ content_for_layout }}
+      {% section 'instagram-grid' %}
+    </main>
+    
+  </body>
+</html>

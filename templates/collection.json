@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-collection",
+      "blocks": {
+        "917c26d1-5c3f-4bea-b71a-9bca1de42bc5": {
+          "type": "flavor",
+          "settings": {
+            "text": "Chocolate",
+            "link": "shopify:\/\/products\/chocolate",
+            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_Choco_BROWN.png"
+          }
+        },
+        "f5ca4c78-a50d-4c56-b7d9-ad0b205e7fb4": {
+          "type": "flavor",
+          "settings": {
+            "text": "Espresso",
+            "link": "shopify:\/\/products\/espresso",
+            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_Espresso_GREY.png"
+          }
+        },
+        "95fbaf77-a005-4759-b02e-8e82f6c911d9": {
+          "type": "flavor",
+          "settings": {
+            "text": "Chocolate Peppermint",
+            "link": "shopify:\/\/products\/chocolate-peppermint",
+            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_ChocoPep_RED.png"
+          }
+        },
+        "829f2f4e-3d0d-42af-91d9-68018594336c": {
+          "type": "flavor",
+          "settings": {
+            "text": "Peach",
+            "link": "shopify:\/\/products\/peach",
+            "image": "shopify:\/\/shop_images\/peach_70ab87f5-e4dc-478a-b3c1-4bcd321b0a9a.png"
+          }
+        },
+        "7bc80cf5-78d5-40c5-bdcf-57b5833b548c": {
+          "type": "flavor",
+          "settings": {
+            "text": "Raspberry",
+            "link": "shopify:\/\/products\/raspberry",
+            "image": "shopify:\/\/shop_images\/rasberry.png"
+          }
+        }
+      },
+      "block_order": [
+        "917c26d1-5c3f-4bea-b71a-9bca1de42bc5",
+        "f5ca4c78-a50d-4c56-b7d9-ad0b205e7fb4",
+        "95fbaf77-a005-4759-b02e-8e82f6c911d9",
+        "829f2f4e-3d0d-42af-91d9-68018594336c",
+        "7bc80cf5-78d5-40c5-bdcf-57b5833b548c"
+      ],
+      "settings": {
+        "heading_prefix": "The XXI Martinis Collection",
+        "heading_main": "Recipes handcrafted by a legendary Las Vegas bartender",
+        "content": "<p>Delicious flavors for every occasion, taste, and vibe. The highest quality vodka martinis ready to enjoy your way. Shake it. Blend into frozen cocktails. Drizzle over ice cream. Sip. Share. Pair with your favorite people and playlist.<\/p>"
+      }
+    },
+    "1631562513b1fe342b": {
+      "type": "call-to-action",
+      "settings": {
+        "heading_prefix": "Thirsty for more?",
+        "heading_main": "Ask for XXI at your favorite<br> restaurant, bar, or liquor store.",
+        "button_label": "Find a location near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1631562513b1fe342b"
+  ]
+}
