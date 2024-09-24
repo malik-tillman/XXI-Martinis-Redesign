@@ -1,3 +1,11 @@
+{% liquid
+  if section.settings.is_fullscreen
+    assign height_class = 'min-h-screen'
+  else
+    assign height_class = ''
+  endif
+%}
+
 <style>
   .ornament {
     background-image: url("{{ 'ornament.svg' | asset_url }}");
@@ -6,9 +14,10 @@
     background-position: top right 15px;
   }
 </style>
-<section class="hero-home flex flex-wrap min-h-screen bg-gray">
-  <div class="w-full md:w-1/2 min-h-screen relative">
-    <div class="media w-full h-full opacity-40 md:opacity-100">
+
+<section class="hero-home flex flex-wrap {{ height_class }} bg-gray">
+  <div class="w-full md:w-1/2 {{ height_class }} relative">
+    <div class="media w-full h-full opacity-100">
       {% if section.settings.show_video == true %}
         <video
             class="video object-cover w-full h-full"
@@ -27,32 +36,50 @@
           class="object-cover w-full h-full">
       {% endif %}
     </div>
-    <div class="flex md:hidden items-center justify-center absolute z-10 top-0 w-full h-full">
+
+    <div class="flex hidden items-center justify-center absolute z-10 top-0 w-full h-full">
       <div class="w-28 text-white" data-aos="fade-block">
         {% render 'icon-lockup' %}
       </div>
     </div>
   </div>
+
   <div class="flex place-items-center relative overflow-hidden w-full md:w-1/2 py-48">
     <div class="sm:container px-6 z-10">
       <div class="md:px-7 lg:px-14 xl:px-20" data-aos="fade-block">
-        <p class="sub-title mb-5 text-silver">{{ section.settings.heading_prefix | escape }}</p>
+        <p class="sub-title mb-5 text-white">{{ section.settings.heading_prefix | escape }}</p>
+
         <p class="title mb-7 text-white">{{ section.settings.heading_main }}</p>
-        <a href="{{ section.settings.button_link | escape }}" class="btn btn--border">
-          {{ section.settings.button_text | escape }}
-        </a>
+
+        {% if section.settings.paragraph %}
+          <p class="text-white mb-7">{{ section.settings.paragraph }}</p>
+        {% endif %}
+
+        {% if section.settings.button_link %}
+          <a href="{{ section.settings.button_link | escape }}" class="btn btn--border">
+            {{ section.settings.button_text | escape }}
+
+            {% render 'icon-btn-arrow' %}
+          </a>
+        {% endif %}
       </div>
     </div>
     <div class="ornament absolute top-0 w-full h-full rellax"></div>
   </div>
 </section>
+
 {% schema %}
   {
-    "name": "Hero",
+    "name": "Text w/ Media",
     "settings": [
       {
         "type": "header",
         "content": "Media"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_fullscreen",
+        "label": "Is section full height?"
       },
       {
         "type": "image_picker",
@@ -86,9 +113,14 @@
         "label": "Heading Prefix"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "heading_main",
         "label": "Heading Main"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "paragraph",
+        "label": "Paragraph"
       },
       {
         "type": "text",
@@ -99,6 +131,11 @@
         "type": "url",
         "id": "button_link",
         "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text w/ Media"
       }
     ]
   }

@@ -1,15 +1,81 @@
 {
   "sections": {
-    "product-description": {
-      "type": "product-description",
+    "main-product-merch": {
+      "type": "main-product-merch",
       "settings": {
-        "product_prefix": "The XXI Martini Collection",
-        "button_label": "Where to Buy",
-        "button_link": "shopify:\/\/pages\/where-to-buy"
+      }
+    },
+    "featured_collection_UiUPfR": {
+      "type": "featured-collection",
+      "blocks": {
+        "flavor_WgUUVV": {
+          "type": "flavor",
+          "settings": {
+            "product": "hat",
+            "image": "shopify:\/\/shop_images\/image_18.png",
+            "title": "Hat",
+            "price": "$xx.xx",
+            "link": "shopify:\/\/products\/hat"
+          }
+        },
+        "flavor_q3Gy9x": {
+          "type": "flavor",
+          "settings": {
+            "product": "t-shirt",
+            "image": "shopify:\/\/shop_images\/image_19.png",
+            "title": "T-Shirt",
+            "price": "$xx.xx",
+            "link": "shopify:\/\/products\/t-shirt"
+          }
+        },
+        "flavor_Em7zKD": {
+          "type": "flavor",
+          "settings": {
+            "product": "shaker",
+            "image": "shopify:\/\/shop_images\/Rounded_Rectangle_1.png",
+            "title": "Shaker",
+            "price": "$xx.xx",
+            "link": "shopify:\/\/products\/shaker"
+          }
+        },
+        "flavor_xJnVeU": {
+          "type": "flavor",
+          "settings": {
+            "product": "hoodie",
+            "image": "shopify:\/\/shop_images\/Rounded_Rectangle_2.png",
+            "title": "Hoodie",
+            "price": "$xx.xx",
+            "link": "shopify:\/\/products\/hoodie"
+          }
+        },
+        "flavor_GmJb9z": {
+          "type": "flavor",
+          "settings": {
+            "product": "crew-neck-sweatshirt",
+            "image": "shopify:\/\/shop_images\/Rounded_Rectangle.png",
+            "title": "Crew Neck Sweatshirt",
+            "price": "$xx.xx",
+            "link": "shopify:\/\/products\/crew-neck-sweatshirt"
+          }
+        }
+      },
+      "block_order": [
+        "flavor_WgUUVV",
+        "flavor_q3Gy9x",
+        "flavor_Em7zKD",
+        "flavor_xJnVeU",
+        "flavor_GmJb9z"
+      ],
+      "settings": {
+        "heading": "Check out The full xxi Martinis Collection",
+        "subheading": "Swag for every occasion",
+        "button_text": "Browse All Merch",
+        "button_link": "shopify:\/\/collections\/merch"
       }
     }
   },
   "order": [
-    "product-description"
+    "main-product-merch",
+    "featured_collection_UiUPfR"
   ]
 }

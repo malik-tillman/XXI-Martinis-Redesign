@@ -1,0 +1,206 @@
+{% liquid
+  assign productTitle = product.title
+  assign description = product.description
+  assign productPrice = product.price | money
+%}
+
+<section class="main--product merch container">
+  <div class="product--media-container">
+    <div class="productSlider swiper {{ section.id }}">
+      <div class="swiper-wrapper">
+        {%- for image in product.images -%}
+          <div class="product--slideshow--image swiper-slide">
+            <div class="image--container">
+              <img src="{{ image.src | img_url: 'master' }}" alt="{{ product.title }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="thumbSlider swiper {{ section.id }}">
+      <div class="swiper-wrapper">
+        {%- for image in product.images -%}
+          <div class="product--slideshow--image swiper-slide">
+            <div class="image--container">
+              <img src="{{ image.src | img_url: 'master' }}" alt="{{ product.title }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <div class="product--details-container container rte">
+    {% if productTitle != blank %}
+      <h1 class="title">{{ productTitle }}</h1>
+    {% endif %}
+
+    {% if description != blank %}
+      <div class="description">{{ description }}</div>
+    {% endif %}
+
+    <div class="product--form">
+      <div class="color rte">
+        <span class="color--title sub-title">Our Options: </span>
+
+        <label>
+          <select name="id">
+            {% for options in product.options_with_values %}
+              {% if options.name == "Color" %}
+                {% for value in options.values %}
+                  <option value="{{ value }}">{{ value }}</option>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </select>
+        </label>
+
+        <div class="color--options--container">
+          {% for options in product.options_with_values %}
+            {% if options.name == "Color" %}
+              {% for value in options.values %}
+                {% liquid
+                  assign selected_variant = product.variants | where: 'title', value | first
+
+                  if selected_variant == blank
+                    assign selected_variant = product.selected_variant
+
+                    for variant in product.variants
+                      if variant.title contains value
+                        assign selected_variant = variant
+                        break
+                      endif
+                    endfor
+                  endif
+                %}
+
+                <div class="color--option" data-name="{{ value }}">
+                  <span class="color--label sub-title">{{ value }}</span>
+
+                  <div class="image--container">
+                    <img src="{{ selected_variant.image | product_img_url: 'master' }}" alt="{{ value }}">
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="size-quantity--container">
+        <div class="size rte">
+          <span class="size--title sub-title">Select Your Size:</span>
+
+          <label>
+            <select name="size" class="size--option">
+              {% for options in product.options_with_values %}
+                {% if options.name == "Size" %}
+                  {% for value in options.values %}
+                    <option value="{{ value }}">{{ value }}</option>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </select>
+          </label>
+        </div>
+
+        <div class="quantity rte">
+          <span class="quantity--title sub-title">Quantity</span>
+
+          <label>
+            <input type="text" name="quantity" min="1" value="1">
+          </label>
+
+          <div class="plus-minus-quantity--selector">
+            <button type="button" class="minus">
+              <svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" fill="white"/>
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" stroke="#A9ADAE"/>
+                <path d="M31.334 19H19.334" stroke="black" stroke-width="1.5"/>
+              </svg>
+            </button>
+
+            <label>
+              <input type="number" name="quantity" value="1" class="quantity--input">
+            </label>
+
+            <button type="button" class="plus">
+              <svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" fill="white"/>
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" stroke="#A9ADAE"/>
+                <path d="M31.334 19H19.334" stroke="black" stroke-width="1.5"/>
+                <path d="M25.334 13V25" stroke="black" stroke-width="1.5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atc--container">
+        <p class="price sub-title">{{ productPrice }}</p>
+
+        <input type="button" value="Add to cart" class="btn" disabled>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.mt_productVariants = {{ product.variants | json }};
+
+  console.log("malik -- ", window.mt_productVariants);
+
+  const thumbSlider = new Swiper('.{{ section.id }}.thumbSlider', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    loop: true,
+    freeMode: false,
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+    grabCursor: true,
+    arrows: false,
+    navigation: {
+      enabled: false,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const productSlider = new Swiper('.{{ section.id }}.productSlider', {
+    loop: true,
+    slidesPerView: 1,
+    autoHeight: true,
+    grabCursor: true,
+    navigation: {
+      enabled: false,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: thumbSlider
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Main Merch Product",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+  ],
+  "settings": [
+  ]
+}
+{% endschema %}
+
+
+

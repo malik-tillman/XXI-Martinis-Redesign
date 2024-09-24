@@ -1,0 +1,93 @@
+{% liquid
+    assign section_heading = section.settings.section_heading | default: 'Our Merch'
+
+    assign enable_promo = section.settings.enable_promo
+    assign promo_image = section.settings.promo_image
+    assign promo_subheading = section.settings.promo_subheading
+    assign promo_heading = section.settings.promo_heading
+    assign promo_link_text = section.settings.promo_link_text
+    assign promo_link = section.settings.promo_link
+%}
+
+<div class="main--collection container">
+    <h2 class="title">{{ section_heading }}</h2>
+
+    <div class="collection--grid">
+        {% for product in collection.products %}
+            <a href="{{ product.url }}" class="grid--item">
+                <div class="image--container">
+                    <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
+                </div>
+
+                <div class="product--details rte">
+                    <p class="product--price sub-title">{{ product.price | money }}</p>
+                    <h2 class="product--title">{{ product.title }}</h2>
+                </div>
+            </a>
+        {% endfor %}
+
+        {% if enable_promo %}
+            <div class="promo--container">
+                <div class="image--container">
+                    <img src="{{ promo_image | img_url: 'master' }}" alt="{{ promo_subheading }}">
+
+                    <a href="{{ promo_link }}" class="promo--details rte text-center">
+                        <p class="promo--sub sub-title text-white">{{ promo_subheading }}</p>
+
+                        <h2 class="promo--title text-white">{{ promo_heading }}</h2>
+
+                        <span class="btn btn--primary">
+                            <span>{{ promo_link_text }}</span>
+
+                            {% render 'icon-btn-arrow' %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_promo" ,
+      "label": "Enable Promo"
+    },
+    {
+      "type": "image_picker",
+      "id": "promo_image" ,
+      "label": "Promo Image"
+    },
+    {
+      "type": "text",
+      "id": "promo_subheading",
+      "label": "Promo Subheading"
+    },
+    {
+      "type": "text",
+      "id": "promo_heading",
+      "label": "Promo Heading"
+    },
+    {
+      "type": "text",
+      "id": "promo_link_text",
+      "label": "Promo Link Text"
+    },
+    {
+      "type": "url",
+      "id": "promo_link" ,
+      "label": "Promo Link"
+    }
+  ]
+}
+{% endschema %}

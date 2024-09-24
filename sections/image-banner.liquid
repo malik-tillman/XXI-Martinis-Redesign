@@ -1,6 +1,6 @@
-<section class="image-banner sm:container px-6 mt-24 md:mt-36 xl:mt-44">
+<section class="image-banner w-full">
   <div class="image-wrap">
-    <div class="image aspect-w-16 aspect-h-14 sm:aspect-h-9">
+    <div class="image w-full aspect-w-16 aspect-h-14 sm:aspect-h-9">
       {% if section.settings.show_video == true %}
         <video
           class="video object-cover w-full h-full"
@@ -19,9 +19,24 @@
           class="object-cover w-full h-full">
       {% endif %}
     </div>
-    <div class="message flex flex-col place-content-center">
+    <div class="message flex flex-col place-content-center text-center">
       <div data-aos="fade-block">
-        <p>{{ section.settings.message }}</p>
+        {% if section.settings.subheading %}
+          <p class="sub-title mb-5">{{ section.settings.subheading | escape }}</p>
+        {% endif %}
+
+        {% if section.settings.message %}
+          <p>{{ section.settings.message }}</p>
+        {% endif %}
+
+        {%- if section.settings.button_link -%}
+          <a href="{{ section.settings.button_link }}" class="btn btn--border mt-8 mx-auto">
+            {{ section.settings.button_text }}
+
+            {% render 'icon-btn-arrow' %}
+          </a>
+        {%- endif -%}
+
         {%- if section.settings.show_logo == true -%}
           <div class="w-12 sm:w-14 md:w-20 mx-auto mt-3 sm:mt-4 md:mt-5">
             {% render 'icon-brand' %}
@@ -37,9 +52,24 @@
     "name": "Image Banner",
     "settings": [
       {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading"
+      },
+      {
         "type": "textarea",
         "id": "message",
-        "label": "Message"
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
       },
       {
         "type": "checkbox",
@@ -72,7 +102,7 @@
     "presets": [
       {
         "name": "Image Banner"
-      }  
+      }
     ]
   }
 {% endschema %}

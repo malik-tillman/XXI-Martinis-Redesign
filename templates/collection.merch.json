@@ -1,124 +1,35 @@
 {
   "sections": {
-    "hero": {
-      "type": "hero-collection",
-      "blocks": {
-        "917c26d1-5c3f-4bea-b71a-9bca1de42bc5": {
-          "type": "flavor",
-          "disabled": true,
-          "settings": {
-            "text": "Chocolate",
-            "link": "shopify:\/\/products\/chocolate",
-            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_Choco_BROWN.png"
-          }
-        },
-        "f5ca4c78-a50d-4c56-b7d9-ad0b205e7fb4": {
-          "type": "flavor",
-          "disabled": true,
-          "settings": {
-            "text": "Espresso",
-            "link": "shopify:\/\/products\/espresso",
-            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_Espresso_GREY.png"
-          }
-        },
-        "95fbaf77-a005-4759-b02e-8e82f6c911d9": {
-          "type": "flavor",
-          "disabled": true,
-          "settings": {
-            "text": "Chocolate Peppermint",
-            "link": "shopify:\/\/products\/chocolate-peppermint",
-            "image": "shopify:\/\/shop_images\/Vodka_Bottle_Mockup-LasVegas_ChocoPep_RED.png"
-          }
-        },
-        "829f2f4e-3d0d-42af-91d9-68018594336c": {
-          "type": "flavor",
-          "disabled": true,
-          "settings": {
-            "text": "Peach",
-            "link": "shopify:\/\/products\/peach",
-            "image": "shopify:\/\/shop_images\/peach_70ab87f5-e4dc-478a-b3c1-4bcd321b0a9a.png"
-          }
-        },
-        "7bc80cf5-78d5-40c5-bdcf-57b5833b548c": {
-          "type": "flavor",
-          "disabled": true,
-          "settings": {
-            "text": "Raspberry",
-            "link": "shopify:\/\/products\/raspberry",
-            "image": "shopify:\/\/shop_images\/rasberry.png"
-          }
-        },
-        "flavor_BC7DCN": {
-          "type": "flavor",
-          "settings": {
-            "text": "T-Shirt",
-            "link": "shopify:\/\/products\/t-shirt",
-            "image": "shopify:\/\/shop_images\/t-shirt-bench_e8ec39e6-b158-41c9-a97a-fd9841f8a487.jpg"
-          }
-        },
-        "flavor_3UGDtr": {
-          "type": "flavor",
-          "settings": {
-            "text": "Crew Neck Sweatshirt",
-            "link": "shopify:\/\/products\/crew-neck-sweatshirt",
-            "image": "shopify:\/\/shop_images\/WhiteCrew_6283d0ff-6e1a-4a25-9bcc-ed58689a30a3.jpg"
-          }
-        },
-        "flavor_zeqf7i": {
-          "type": "flavor",
-          "settings": {
-            "text": "Hat",
-            "link": "shopify:\/\/products\/hat",
-            "image": "shopify:\/\/shop_images\/BlackCrewBlackCap.jpg"
-          }
-        },
-        "flavor_UtJdWx": {
-          "type": "flavor",
-          "settings": {
-            "text": "Hoodie",
-            "link": "shopify:\/\/products\/hoodie",
-            "image": "shopify:\/\/shop_images\/WhiteHoodie-WhiteBeanie.jpg"
-          }
-        },
-        "flavor_eRGqcb": {
-          "type": "flavor",
-          "settings": {
-            "text": "Shaker",
-            "link": "shopify:\/\/products\/shaker",
-            "image": "shopify:\/\/shop_images\/Shaker.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "917c26d1-5c3f-4bea-b71a-9bca1de42bc5",
-        "f5ca4c78-a50d-4c56-b7d9-ad0b205e7fb4",
-        "95fbaf77-a005-4759-b02e-8e82f6c911d9",
-        "829f2f4e-3d0d-42af-91d9-68018594336c",
-        "7bc80cf5-78d5-40c5-bdcf-57b5833b548c",
-        "flavor_BC7DCN",
-        "flavor_3UGDtr",
-        "flavor_zeqf7i",
-        "flavor_UtJdWx",
-        "flavor_eRGqcb"
-      ],
+    "hero-home": {
+      "type": "hero-home",
       "settings": {
+        "is_fullscreen": false,
+        "image": "shopify:\/\/shop_images\/GroupFire_grande_2x.jpg_2.png",
+        "show_video": false,
+        "vimeo_link": "https:\/\/vimeo.com\/813997867",
+        "loop_video": true,
         "heading_prefix": "The XXI Martinis Collection",
         "heading_main": "Swag for every occasion",
-        "content": "<p>Shake it Up With XXI Martinis' Premium Merchandise Collection.<\/p>"
+        "paragraph": "Shake it Up With XXI Martinis' Premium Merchandise Collection.",
+        "button_text": "Find it near you",
+        "button_link": ""
       }
     },
-    "1631562513b1fe342b": {
-      "type": "call-to-action",
+    "hero": {
+      "type": "main-collection",
       "settings": {
-        "heading_prefix": "Thirsty for more?",
-        "heading_main": "Ask for XXI at your favorite<br> restaurant, bar, or liquor store.",
-        "button_label": "Find a location near you",
-        "button_link": "shopify:\/\/pages\/where-to-buy"
+        "section_heading": "",
+        "enable_promo": true,
+        "promo_image": "shopify:\/\/shop_images\/CTA.png",
+        "promo_subheading": "Thirsty for more?",
+        "promo_heading": "Ask for XXI at your favorite Restaurant, Bar, or Liquor Store",
+        "promo_link_text": "Find it near you",
+        "promo_link": "shopify:\/\/pages\/where-to-buy"
       }
     }
   },
   "order": [
-    "hero",
-    "1631562513b1fe342b"
+    "hero-home",
+    "hero"
   ]
 }

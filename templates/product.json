@@ -1,15 +1,170 @@
 {
   "sections": {
-    "product-description": {
-      "type": "product-description",
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "flavor_BWg6Nj": {
+          "type": "flavor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle2495_5.png",
+            "link": "shopify:\/\/products\/peach",
+            "accent": "#a35520"
+          }
+        },
+        "flavor_Vtxq66": {
+          "type": "flavor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle2495_6.png",
+            "link": "shopify:\/\/products\/chocolate",
+            "accent": "#c65115"
+          }
+        },
+        "flavor_3DmGqn": {
+          "type": "flavor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle2495_7.png",
+            "link": "shopify:\/\/products\/espresso",
+            "accent": "#838587"
+          }
+        },
+        "flavor_XgUabD": {
+          "type": "flavor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle2495_8.png",
+            "link": "shopify:\/\/products\/raspberry",
+            "accent": "#b40e71"
+          }
+        },
+        "flavor_FbW4qx": {
+          "type": "flavor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle2495_9.png",
+            "link": "shopify:\/\/products\/chocolate-peppermint",
+            "accent": "#b02b32"
+          }
+        }
+      },
+      "block_order": [
+        "flavor_BWg6Nj",
+        "flavor_Vtxq66",
+        "flavor_3DmGqn",
+        "flavor_XgUabD",
+        "flavor_FbW4qx"
+      ],
       "settings": {
-        "product_prefix": "The XXI Martini Collection",
-        "button_label": "Where to Buy",
-        "button_link": "shopify:\/\/pages\/where-to-buy"
+        "subheading": "XXI Martinis",
+        "button_text": "Where to Buy",
+        "button_link": "shopify:\/\/pages\/where-to-buy",
+        "recipes_heading": "Perfect For:"
+      }
+    },
+    "featured_collection_UiUPfR": {
+      "type": "featured-collection",
+      "blocks": {
+        "flavor_xJTCxq": {
+          "type": "flavor",
+          "settings": {
+            "product": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_2495_7.png",
+            "title": "Espresso",
+            "price": "$29.99",
+            "link": "shopify:\/\/products\/espresso"
+          }
+        },
+        "flavor_dCb49U": {
+          "type": "flavor",
+          "settings": {
+            "product": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_2495_8.png",
+            "title": "Raspberry",
+            "price": "$29.99",
+            "link": "shopify:\/\/products\/raspberry"
+          }
+        },
+        "flavor_EiBayt": {
+          "type": "flavor",
+          "settings": {
+            "product": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_2495_9.png",
+            "title": "Chocolate Peppermint",
+            "price": "$29.99",
+            "link": "shopify:\/\/products\/chocolate-peppermint"
+          }
+        },
+        "flavor_8dKC3q": {
+          "type": "flavor",
+          "settings": {
+            "product": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_2495_5.png",
+            "title": "Peach",
+            "price": "$29.99",
+            "link": "shopify:\/\/products\/peach"
+          }
+        },
+        "flavor_fhCBaH": {
+          "type": "flavor",
+          "settings": {
+            "product": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_2495_6.png",
+            "title": "Chocolate",
+            "price": "$29.99",
+            "link": "shopify:\/\/products\/chocolate"
+          }
+        }
+      },
+      "block_order": [
+        "flavor_xJTCxq",
+        "flavor_dCb49U",
+        "flavor_EiBayt",
+        "flavor_8dKC3q",
+        "flavor_fhCBaH"
+      ],
+      "settings": {
+        "heading": "Shop Our Other XXI Martini Products",
+        "subheading": "Flavors for every occasion. Simply shake, pour, and sip. XXI always wins.",
+        "button_text": "Browse All Flavors",
+        "button_link": "shopify:\/\/products\/raspberry"
+      }
+    },
+    "1631306900414ab879": {
+      "type": "carousel",
+      "blocks": {
+        "e8aa1f9f-4a1a-441e-896e-26db1ffb9ddd": {
+          "type": "slide",
+          "settings": {
+            "text": "Real Love From Real People",
+            "heading_main": "\"What's good about this spirit? Absolutely everything\"",
+            "message": "- American Distilling Institute, International Spirits Awards 2022",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e8aa1f9f-4a1a-441e-896e-26db1ffb9ddd"
+      ],
+      "settings": {
+      }
+    },
+    "1631302377eb4d13cf": {
+      "type": "image-banner",
+      "settings": {
+        "subheading": "Thirsty for more?",
+        "message": "Ask for XXI at your favorite Restaurant, Bar, or Liquor Store",
+        "button_text": "Find it near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy",
+        "show_logo": false,
+        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
+        "show_video": false,
+        "vimeo_link": "https:\/\/player.vimeo.com\/external\/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
+        "loop_video": false
       }
     }
   },
   "order": [
-    "product-description"
+    "main-product",
+    "featured_collection_UiUPfR",
+    "1631306900414ab879",
+    "1631302377eb4d13cf"
   ]
 }

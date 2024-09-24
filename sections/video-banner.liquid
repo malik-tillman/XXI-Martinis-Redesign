@@ -1,12 +1,12 @@
-<section class="video-banner relative flex flex-wrap min-h-screen">
+<section class="video-banner relative flex flex-wrap">
   <div class="w-full relative">
     <div class="image relative">
       {% if section.settings.video %}
         <video
           class="video object-cover w-full h-full absolute inset-0 w-full h-full object-cover relative overflow-hidden"
-          playsinline
-          width="100%"
           height="auto"
+          width="100%"
+          playsinline
           autoplay
           muted
           loop
@@ -16,13 +16,15 @@
         </video>
 
 
-      <div class="message absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-        <div data-aos="fade-block">
+      <div class="message absolute sm:container top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+        <div data-aos="fade-block" class="container message--content">
           <div class="sub-title" style="color:white;">{{ section.settings.heading_prefix | escape }}</div>
           <p class="title mt-6" style="color:white;">{{ section.settings.heading_main }}</p>
           {%- if section.settings.button_link -%}
             <a href="{{ section.settings.button_link }}" class="btn btn--border mt-8">
               {{ section.settings.button_label }}
+
+              {% render 'icon-btn-arrow' %}
             </a>
           {%- endif -%}
         </div>
@@ -66,7 +68,7 @@
     "presets": [
       {
         "name": "Video Banner"
-      }  
+      }
     ]
   }
 {% endschema %}

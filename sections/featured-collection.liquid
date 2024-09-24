@@ -1,0 +1,169 @@
+<section class="featured-collection text-center">
+  <div class="heading--container rte text-center">
+    <h2 class="text">{{ section.settings.heading }}</h2>
+
+    <p>{{ section.settings.subheading }}</p>
+  </div>
+
+  <div class="swiper {{ section.id }}">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% liquid
+          if request.path == block.settings.link
+            continue
+          endif
+        %}
+
+        <div class="swiper-slide">
+          <a href="{{ block.settings.link }}" class="flavor rte text-center">
+            <div class="image--container">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.flavor }}">
+            </div>
+
+            <h3>{{ block.settings.product.title | default: block.settings.title }}</h3>
+
+            <p>{{ block.settings.product.price | money | default: block.settings.price }}</p>
+          </a>
+        </div>
+      {% endfor %}
+
+      {% for block in section.blocks %}
+        {% liquid
+          if request.path == block.settings.link
+            continue
+          endif
+        %}
+
+        <div class="swiper-slide">
+          <a href="{{ block.settings.link }}" class="flavor rte text-center">
+            <div class="image--container">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.flavor }}">
+            </div>
+
+            <h3>{{ block.settings.product.title | default: block.settings.title }}</h3>
+
+            <p>{{ block.settings.product.price | money | default: block.settings.price }}</p>
+          </a>
+        </div>
+      {% endfor %}
+
+      {% for block in section.blocks %}
+        {% liquid
+          if request.path == block.settings.link
+            continue
+          endif
+        %}
+
+        <div class="swiper-slide">
+          <a href="{{ block.settings.link }}" class="flavor rte text-center">
+            <div class="image--container">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.flavor }}">
+            </div>
+
+            <h3>{{ block.settings.product.title | default: block.settings.title }}</h3>
+
+            <p>{{ block.settings.product.price | money | default: block.settings.price }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if section.settings.button_link != blank %}
+    <a href="{{ section.settings.button_link }}" class="btn text-center">
+      {{ section.settings.button_text }}
+
+      {% render 'icon-btn-arrow' %}
+    </a>
+  {% endif %}
+</section>
+
+<script>
+    var swiper = new Swiper('.swiper.{{ section.id }}', {
+      slidesPerView: 2.25,
+      spaceBetween: 25,
+      centeredSlides: true,
+      loop: true,
+      freeMode: true,
+      grabCursor: true,
+      speed: 5000,
+      freeModeMomentum: false,
+      autoplay: {
+        delay: 1,
+        pauseOnInteraction: true
+      },
+      breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+      },
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Flavor",
+      "type": "flavor",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Flavor"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

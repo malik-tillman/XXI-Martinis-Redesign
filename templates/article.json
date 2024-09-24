@@ -1,12 +1,43 @@
 {
   "sections": {
+    "hero-home": {
+      "type": "hero-home",
+      "settings": {
+        "is_fullscreen": false,
+        "image": "{{ article.image }}",
+        "show_video": false,
+        "vimeo_link": "https:\/\/vimeo.com\/813997867",
+        "loop_video": true,
+        "heading_prefix": "",
+        "heading_main": "{{ article.title }}",
+        "paragraph": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
     "main": {
       "type": "main-article",
       "settings": {
       }
+    },
+    "1631302377eb4d13cf": {
+      "type": "image-banner",
+      "settings": {
+        "subheading": "Thirsty for more?",
+        "message": "Ask for XXI at your favorite Restaurant, Bar, or Liquor Store",
+        "button_text": "Find it near you",
+        "button_link": "shopify:\/\/pages\/where-to-buy",
+        "show_logo": false,
+        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
+        "show_video": false,
+        "vimeo_link": "https:\/\/player.vimeo.com\/external\/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
+        "loop_video": false
+      }
     }
   },
   "order": [
-    "main"
+    "hero-home",
+    "main",
+    "1631302377eb4d13cf"
   ]
 }

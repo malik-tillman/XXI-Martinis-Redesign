@@ -1,9 +1,9 @@
-<section class="carousel pb-10 mt-24 md:mt-36 xl:mt-44">
+<section class="carousel">
   {% for block in section.blocks %}
-    <div class="slide flex items-center w-full min-h-full md:w-7/12 mr-3 md:mr-4 xl:mr-6 overflow-hidden bg-gray">
-      <div class="sm:container px-6 sm:px-12 sm:px-24 md:px-20 xl:px-24 py-32 text-center">
-        <div data-aos="fade-block">
-          <div class="sub-title">{{ block.settings.text | escape }}</div>
+    <div class="slide flex items-center w-full overflow-hidden bg-white">
+      <div class="sm:container px-6 sm:px-12 sm:px-24 md:px-20 xl:px-24 py-32 sm:py-12 text-center content--container-wrapper">
+        <div data-aos="fade-block" class="content--container">
+          <div class="sub-title text-black">{{ block.settings.text | escape }}</div>
           <p class="title mt-6">{{ block.settings.heading_main }}</p>
           <p class="mt-5">{{ block.settings.message }}</p>
           {%- if block.settings.button_link -%}
@@ -44,9 +44,10 @@
     </div>
   {% endfor %}
 </section>
+
 {% schema %}
   {
-    "name": "Carousel",
+    "name": "Testimonials",
     "blocks": [
       {
        "name": "Slide",
@@ -78,12 +79,12 @@
            "label": "Button Label"
          }
        ]
-     }  
+     }
     ],
     "presets": [
       {
-        "name": "Carousel"
-      }  
+        "name": "Testimonials"
+      }
     ]
   }
 {% endschema %}

@@ -16,6 +16,8 @@
 
         ],
         "settings": {
+          "logo": "shopify:\/\/shop_images\/XXILogo_Horizontal_White_1_1.png",
+          "alternative_logo": "shopify:\/\/shop_images\/XXILogo_Horizontal_White_1.png",
           "header_linklist": "main-menu-v2",
           "mobile_linklist": "mobile-menu"
         }
@@ -38,12 +40,18 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "signup_heading": "Sign up for exclusive XXI mixology tips, recipes, and news.",
+          "signup_heading": "Join us for the party already in progress",
+          "signup_subheading": "Sign up for exclusive XXI mixology tips, recipes, and news.",
+          "signup_policy": "By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.",
           "contact_heading": "Get in touch",
-          "contact_linklist": "contact-menu",
+          "contact_linklist": "footer-main-menu-v2",
           "follow_heading": "Follow",
-          "follow_linklist": "follow-menu",
-          "footer_linklist": "footer"
+          "follow_linklist": "footer-main-menu-v2",
+          "footer_linklist": "footer",
+          "facebook": "#",
+          "twitter": "#",
+          "instagram": "#",
+          "spotify": "#"
         }
       }
     },
