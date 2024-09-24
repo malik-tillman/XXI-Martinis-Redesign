@@ -617,6 +617,13 @@
 .mobile_menu_active .header .brand {
   color: white;
 }
+.blog-tag--filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #A9ADAE;
+}
+
 .main-blog .blog-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

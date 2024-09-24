@@ -151,4 +151,16 @@
 
     }
   });
-})()
+})();
+
+(() => {
+  let filterBy = document.getElementById("BlogTagFilter");
+
+  if (!filterBy) {
+    return;
+  }
+
+  filterBy.addEventListener("change", function () {
+    location.href = filterBy.value;
+  });
+})();

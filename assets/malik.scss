@@ -815,6 +815,15 @@ $mobile: 768px;
   }
 }
 
+.blog-tag--filter-container {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  color: #A9ADAE;
+}
+
 .main-blog {
   .blog-articles {
     display: grid;

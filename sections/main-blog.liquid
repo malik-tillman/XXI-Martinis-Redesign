@@ -1,10 +1,33 @@
-{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
-
-
 {%- paginate blog.articles by 6 -%}
     <div class="main-blog container py-32">
+        {%- if blog.tags.size > 0 -%}
+            <label class="blog-tag--filter-container container">
+                <span class="label">Filter: </span>
+
+                <select id="BlogTagFilter">
+                    <option value="/blogs/{{ blog.handle }}">Flavor</option>
+                    {%- for tag in blog.all_tags -%}
+                        {% if tag contains '_' %}
+                            {%- assign tag_starts_with = tag | slice: 0 -%}
+                            {% if tag_starts_with == '_' -%}
+                                {%- if tag_count %}
+                                    {%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}
+                                {% endif -%}
+                                {%- continue -%}
+                            {%- endif -%}
+                        {%- endif %}
+                        <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}"
+                                {% if current_tags contains tag %}
+                                    selected
+                                {% endif %}
+                        >
+                            {{ tag }}
+                        </option>
+                    {%- endfor -%}
+                </select>
+            </label>
+        {%- endif -%}
+
         <div class="blog-articles">
             {%- for article in blog.articles -%}
               <a href="{{ article.url }}" class="blog-article--card">
@@ -27,56 +50,10 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-blog.name",
+  "name": "Blog Grid",
   "tag": "section",
   "class": "spaced-section",
   "settings": [
-    {
-      "type": "header",
-      "content": "t:sections.main-blog.settings.header.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_image",
-      "default": true,
-      "label": "t:sections.main-blog.settings.show_image.label",
-      "info": "t:sections.main-blog.settings.show_image.info"
-    },
-    {
-      "type": "paragraph",
-      "content": "t:sections.main-blog.settings.paragraph.content"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "title",
-      "name": "t:sections.main-blog.blocks.title.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_date",
-          "default": true,
-          "label": "t:sections.main-blog.blocks.title.settings.show_date.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_author",
-          "default": false,
-          "label": "t:sections.main-blog.blocks.title.settings.show_author.label"
-        }
-      ]
-    },
-    {
-      "type": "summary",
-      "name": "t:sections.main-blog.blocks.summary.name",
-      "limit": 1
-    },
-    {
-      "type": "link",
-      "name": "t:sections.main-blog.blocks.link.name",
-      "limit": 1
-    }
   ]
 }
 {% endschema %}
