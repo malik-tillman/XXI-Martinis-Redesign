@@ -142,6 +142,8 @@ $mobile: 768px;
 
     p {
       margin: 0;
+      max-width: 600px;
+      margin: auto;
     }
   }
 
@@ -454,7 +456,7 @@ $mobile: 768px;
 
       .size-quantity--container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 20px;
 
         margin-top: 25px;

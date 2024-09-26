@@ -4,8 +4,8 @@
       "type": "video-banner",
       "settings": {
         "video": "shopify:\/\/files\/videos\/Party30sec_NoLogo (update 9_19_24).mp4",
-        "heading_prefix": "Bottled Perfection",
-        "heading_main": "Delicious premium\nvodka martinis.\nLegendary recipes.\nInstantly enjoyable.",
+        "heading_prefix": "All you have to do is shake and pour",
+        "heading_main": "Ready-to-Serve Martinis. Legendary Recipe. Instantly Enjoyable.",
         "button_label": "Find it near you",
         "button_link": "shopify:\/\/pages\/where-to-buy"
       }
@@ -72,8 +72,8 @@
         "flavor_fhCBaH"
       ],
       "settings": {
-        "heading": "The xxi Martinis Collection",
-        "subheading": "Flavors for every occasion. Simply shake, pour, and sip. XXI always wins.",
+        "heading": "Ready-to-Serve Martinis ",
+        "subheading": "Six martinis in every bottle, crafted with premium vodka and a legendary recipe straight from Las Vegas bartender Angelo Bottley. With a flavor for every occasion, XXIMartinis brings the perfect pour every time. Which flavor will you sip next?",
         "button_text": "Browse All Flavors",
         "button_link": "shopify:\/\/collections\/flavors"
       }
