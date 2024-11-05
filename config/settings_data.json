@@ -1,13 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "checkout_layout": "onepage",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
           "show_announcement": false,
-          "announcement_bar": "<p>NOW AVAILABLE ONLINE! CLICK <a href=\"https:\/\/www.woodswholesalewine.com\/search?&q=xxi%20martini&type=product\" title=\"https:\/\/www.woodswholesalewine.com\/search?&q=xxi%20martini&type=product\">HERE<\/a> TO ORDER!<\/p>"
+          "announcement_bar": "<p>NOW AVAILABLE ONLINE! CLICK <a href=\"https://www.woodswholesalewine.com/search?&q=xxi%20martini&type=product\" title=\"https://www.woodswholesalewine.com/search?&q=xxi%20martini&type=product\">HERE</a> TO ORDER!</p>"
         }
       },
       "header": {
@@ -16,8 +25,8 @@
 
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/XXILogo_Horizontal_White_1_1.png",
-          "alternative_logo": "shopify:\/\/shop_images\/XXILogo_Horizontal_White_1.png",
+          "logo": "shopify://shop_images/XXILogo_Horizontal_White_1_1.png",
+          "alternative_logo": "shopify://shop_images/XXILogo_Horizontal_White_1.png",
           "header_linklist": "main-menu-v2",
           "mobile_linklist": "mobile-menu"
         }
@@ -28,13 +37,13 @@
           "heading_prefix": "The moment won't wait.",
           "heading_main": "Join us for the party already in progress",
           "instagram_handle": "@xximartinis",
-          "instagram_link": "https:\/\/www.instagram.com\/xximartinis\/",
-          "image_1": "shopify:\/\/shop_images\/TwoBottles.jpg",
-          "image_2": "shopify:\/\/shop_images\/GlassesPouring.jpg",
-          "image_3": "shopify:\/\/shop_images\/FlowersTable.jpg",
-          "image_4": "shopify:\/\/shop_images\/GameDay.jpg",
-          "image_5": "shopify:\/\/shop_images\/BeachBottle.jpg",
-          "image_6": "shopify:\/\/shop_images\/TwoToast.jpg"
+          "instagram_link": "https://www.instagram.com/xximartinis/",
+          "image_1": "shopify://shop_images/TwoBottles.jpg",
+          "image_2": "shopify://shop_images/GlassesPouring.jpg",
+          "image_3": "shopify://shop_images/FlowersTable.jpg",
+          "image_4": "shopify://shop_images/GameDay.jpg",
+          "image_5": "shopify://shop_images/BeachBottle.jpg",
+          "image_6": "shopify://shop_images/TwoToast.jpg"
         }
       },
       "footer": {
@@ -48,10 +57,10 @@
           "follow_heading": "Follow",
           "follow_linklist": "footer-main-menu-v2",
           "footer_linklist": "footer",
-          "facebook": "#",
-          "twitter": "#",
-          "instagram": "#",
-          "spotify": "#"
+          "facebook": "https://www.facebook.com/xximartinis/",
+          "twitter": "https://twitter.com/xximartinis/",
+          "instagram": "https://www.instagram.com/xximartinis/",
+          "spotify": "https://open.spotify.com/user/31ef6wtgze4ckn5t6wgn4cpz7hbe?si=aa5b58bf454e4803&nd=1"
         }
       }
     },
@@ -60,13 +69,13 @@
     ],
     "blocks": {
       "15706352229161960306": {
-        "type": "shopify:\/\/apps\/slide-cart-sticky-cart-drawer\/blocks\/app-embeded\/41ace2ee-41e6-45af-a9c4-452e6defecc0",
+        "type": "shopify://apps/slide-cart-sticky-cart-drawer/blocks/app-embeded/41ace2ee-41e6-45af-a9c4-452e6defecc0",
         "disabled": false,
         "settings": {
         }
       },
       "16278478101612877664": {
-        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
         "settings": {
         }

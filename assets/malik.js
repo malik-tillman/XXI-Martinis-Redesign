@@ -63,29 +63,32 @@
       atcButton.addEventListener('click', () => {
         console.log('malik -- ATC button clicked', window?.mt_productVariants);
 
-        const selectedColor = productPageForm.querySelector('.color--option.active')?.dataset.name;
-        const selectedSize = sizeOption.value;
+        if (sizeOption && colorOptions) {
+          // Find variant id based on selected color and size
+        }
+
+        else {
+          // Find variant id
+        }
+
+        const selectedColor = colorOptions && productPageForm.querySelector('.color--option.active')?.dataset.name;
+        const selectedSize = sizeOption && sizeOption.value;
         const selectedQuantity = quantityInput.value;
 
-        if (!selectedColor || !selectedSize || !selectedQuantity) {
+        if (((!selectedColor || !selectedSize) && (sizeOption && colorOptions)) || !selectedQuantity) {
           console.error('malik -- Please select a color, size, and quantity');
           return;
         }
 
         // Find variant id based on selected color and size
-        const selectedVariant = window.mt_productVariants.find(variant => {
+        const selectedVariant = (sizeOption && colorOptions) ? window.mt_productVariants.find(variant => {
           return variant.option1 === selectedColor && variant.option2 === selectedSize;
-        });
+        }) : { id: atcButton.dataset.id };
 
         if (!selectedVariant || !selectedVariant.id) {
           console.error('malik -- Could not find variant for selected color and size');
           return;
         }
-
-        console.log('malik -- selectedColor', selectedColor);
-        console.log('malik -- selectedSize', selectedSize);
-        console.log('malik -- selectedQuantity', selectedQuantity);
-        console.log('malik -- selectedVariant', selectedVariant?.id);
 
         // Add to cart
         fetch('/cart/add.js', {

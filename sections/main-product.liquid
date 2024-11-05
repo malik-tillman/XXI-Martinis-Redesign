@@ -57,6 +57,12 @@
       <div class="description">{{ description }}</div>
     {% endif %}
 
+    {% if button_text != blank or button_link != blank %}
+      <a href="{{ button_link }}" class="btn">
+        {{ button_text }}
+      </a>
+    {% endif %}
+
     <div class="flavors--container">
       <h2 class="flavor--title">
         Flavor: {{ product.title }}
@@ -65,41 +71,75 @@
       <div class="flavor--list">
         {% for block in section.blocks %}
           {% liquid
-            if request.path != block.settings.link
-              continue
-            endif
+            assign active_class = ''
 
-            assign activeAccent = block.settings.accent
+            if request.path == block.settings.link
+              assign active_class = 'active'
+              assign activeAccent = block.settings.accent
+            endif
           %}
 
-          <a href="{{ block.settings.link }}" class="flavor--item {{ block.id }} active" style="--accent-color: {{ block.settings.accent | color_to_rgb }}">
+          <a href="{{ block.settings.link }}" class="flavor--item {{ block.id }} {{ active_class }}" style="--accent-color: {{ block.settings.accent | color_to_rgb }}">
             <div class="flavor--image--container">
               <img src="{{ block.settings.image | img_url: 'master' }}" alt="Go to {{ block.settings.url }}">
             </div>
-          </a>
-        {% endfor %}
 
-        {% for block in section.blocks %}
-          {% liquid
-            if request.path == block.settings.link
-              continue
-            endif
-          %}
-
-          <a href="{{ block.settings.link }}" class="flavor--item {{ block.id }}" style="--accent-color: {{ block.settings.accent | color_to_rgb }}">
-            <div class="flavor--image--container">
-                <img src="{{ block.settings.image | img_url: 'master' }}" alt="Go to {{ block.settings.url }}">
-            </div>
+            <p class="flavor--name">{{ block.settings.title }}</p>
           </a>
         {% endfor %}
       </div>
     </div>
 
-    {% if button_text != blank or button_link != blank %}
-      <a href="{{ button_link }}" class="btn">
-        {{ button_text }}
-      </a>
-    {% endif %}
+    <div class="product--form">
+      <div class="size-quantity--container">
+        <div class="quantity rte">
+          <span class="quantity--title sub-title">Quantity</span>
+
+          <label>
+            <input type="text" name="quantity" min="1" value="1">
+          </label>
+
+          <div class="plus-minus-quantity--selector">
+            <button type="button" class="minus">
+              <svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" fill="white"/>
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" stroke="var(--page-accent)"/>
+                <path d="M31.334 19H19.334" stroke="var(--page-accent)" stroke-width="1.5"/>
+              </svg>
+            </button>
+
+            <label>
+              <input type="number" name="quantity" value="1" class="quantity--input">
+            </label>
+
+            <button type="button" class="plus">
+              <svg width="50" height="38" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" fill="white"/>
+                <path d="M7 0.5C3.41015 0.5 0.5 3.41015 0.5 7V31C0.5 34.5899 3.41015 37.5 7 37.5H43C46.5899 37.5 49.5 34.5899 49.5 31V7C49.5 3.41015 46.5899 0.5 43 0.5H7Z" stroke="var(--page-accent)"/>
+                <path d="M31.334 19H19.334" stroke="var(--page-accent)" stroke-width="1.5"/>
+                <path d="M25.334 13V25" stroke="var(--page-accent)" stroke-width="1.5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="atc--container">
+        <input type="button" value="Add to cart" class="btn" data-id="{{ product.selected_or_first_available_variant.id }}">
+
+        {% if section.settings.disclaimer != blank %}
+          <div class="disclaimer--container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="disclaimer--svg">
+              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+            </svg>
+
+            <span class="disclaimer--text">
+              {{ section.settings.disclaimer }}
+            </span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </section>
 
@@ -175,13 +215,15 @@
 {% else %}
   <style>
     :root {
-      --page-accent: black;
-      --page-accent-2: rgba(0, 0, 0, 0.5);
+      --page-accent: #000;
+      --page-accent-2: #A9ADAE;
     }
   </style>
 {% endif %}
 
 <script>
+  window.mt_productVariants = {{ product.variants | json }};
+
   const thumbSlider = new Swiper('.{{ section.id }}.thumbSlider', {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -226,6 +268,11 @@
       "name": "Flavor",
       "settings": [
         {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "Image"
@@ -267,6 +314,11 @@
       "id": "recipes_heading",
       "label": "Recipes Heading",
       "default": "Perfect For:"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer Text"
     }
   ]
 }

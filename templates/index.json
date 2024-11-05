@@ -1,13 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "video_banner_bBRCLJ": {
       "type": "video-banner",
       "settings": {
-        "video": "shopify:\/\/files\/videos\/Party30sec_NoLogo (update 9_19_24).mp4",
-        "heading_prefix": "All you have to do is shake and pour",
+        "video": "shopify://files/videos/Party30sec_NoLogo (update 9_19_24).mp4",
+        "heading_prefix": "Just shake and pour",
         "heading_main": "Ready-to-Serve Martinis. Legendary Recipe. Instantly Enjoyable.",
         "button_label": "Find it near you",
-        "button_link": "shopify:\/\/pages\/where-to-buy"
+        "button_link": "shopify://pages/where-to-buy"
       }
     },
     "featured_collection_UiUPfR": {
@@ -17,50 +26,50 @@
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_7.png",
+            "image": "shopify://shop_images/Rectangle_2495_7.png",
             "title": "Espresso",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/espresso"
+            "link": "shopify://products/espresso"
           }
         },
         "flavor_dCb49U": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_8.png",
+            "image": "shopify://shop_images/Rectangle_2495_8.png",
             "title": "Raspberry",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/raspberry"
+            "link": "shopify://products/raspberry"
           }
         },
         "flavor_EiBayt": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_9.png",
+            "image": "shopify://shop_images/Rectangle_2495_9.png",
             "title": "Chocolate Peppermint",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/chocolate-peppermint"
+            "link": "shopify://products/chocolate-peppermint"
           }
         },
         "flavor_8dKC3q": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_5.png",
+            "image": "shopify://shop_images/Rectangle_2495_5.png",
             "title": "Peach",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/peach"
+            "link": "shopify://products/peach"
           }
         },
         "flavor_fhCBaH": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_6.png",
+            "image": "shopify://shop_images/Rectangle_2495_6.png",
             "title": "Chocolate",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/chocolate"
+            "link": "shopify://products/chocolate"
           }
         }
       },
@@ -75,22 +84,22 @@
         "heading": "Ready-to-Serve Martinis ",
         "subheading": "Six martinis in every bottle, crafted with premium vodka and a legendary recipe straight from Las Vegas bartender Angelo Bottley. With a flavor for every occasion, XXIMartinis brings the perfect pour every time. Which flavor will you sip next?",
         "button_text": "Browse All Flavors",
-        "button_link": "shopify:\/\/collections\/flavors"
+        "button_link": "shopify://collections/flavors"
       }
     },
     "hero-home": {
       "type": "hero-home",
       "settings": {
         "is_fullscreen": false,
-        "image": "shopify:\/\/shop_images\/GroupFire_grande_2x_jpg.png",
+        "image": "shopify://shop_images/GroupFire_grande_2x_jpg.png",
         "show_video": false,
-        "vimeo_link": "https:\/\/vimeo.com\/813997867",
+        "vimeo_link": "https://vimeo.com/813997867",
         "loop_video": true,
-        "heading_prefix": "subheading",
-        "heading_main": "Here, We’re always ready to shake.",
-        "paragraph": "Lorem ipsum dolor sit amet consectetur. Vitae faucibus amet tortor nibh faucibus vel id. Elit gravida a posuere interdum. Lacus a euismod porttitor lobortis faucibus non. Parturient sed quis elementum habitasse.",
+        "heading_prefix": "All you have to do is shake and pour",
+        "heading_main": "Ready-to-Serve Martinis",
+        "paragraph": "Six martinis in every bottle, crafted with premium vodka and a legendary recipe straight from Las Vegas bartender Angelo Bottley. With a flavor for every occasion, XXIMartinis brings the perfect pour every time. Which flavor will you sip next?",
         "button_text": "Our Story",
-        "button_link": "shopify:\/\/pages\/where-to-buy"
+        "button_link": "shopify://pages/where-to-buy"
       }
     },
     "1631306900414ab879": {
@@ -119,11 +128,11 @@
         "subheading": "Thirsty for more?",
         "message": "Ask for XXI at your favorite Restaurant, Bar, or Liquor Store",
         "button_text": "Find it near you",
-        "button_link": "shopify:\/\/pages\/where-to-buy",
+        "button_link": "shopify://pages/where-to-buy",
         "show_logo": false,
-        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
+        "image": "shopify://shop_images/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
         "show_video": false,
-        "vimeo_link": "https:\/\/player.vimeo.com\/external\/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
+        "vimeo_link": "https://player.vimeo.com/external/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
         "loop_video": false
       }
     }

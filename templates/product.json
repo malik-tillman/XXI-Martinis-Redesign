@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-product": {
@@ -6,40 +15,45 @@
         "flavor_BWg6Nj": {
           "type": "flavor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle2495_5.png",
-            "link": "shopify:\/\/products\/peach",
-            "accent": "#a35520"
+            "title": "Peach",
+            "image": "shopify://shop_images/Rectangle2495_5.png",
+            "link": "shopify://products/peach",
+            "accent": "#c65115"
           }
         },
         "flavor_Vtxq66": {
           "type": "flavor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle2495_6.png",
-            "link": "shopify:\/\/products\/chocolate",
-            "accent": "#c65115"
+            "title": "Chocolate",
+            "image": "shopify://shop_images/Rectangle2495_6.png",
+            "link": "shopify://products/chocolate",
+            "accent": "#a35520"
           }
         },
         "flavor_3DmGqn": {
           "type": "flavor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle2495_7.png",
-            "link": "shopify:\/\/products\/espresso",
+            "title": "Espresso",
+            "image": "shopify://shop_images/Rectangle2495_7.png",
+            "link": "shopify://products/espresso",
             "accent": "#838587"
           }
         },
         "flavor_XgUabD": {
           "type": "flavor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle2495_8.png",
-            "link": "shopify:\/\/products\/raspberry",
+            "title": "Raspberry",
+            "image": "shopify://shop_images/Rectangle2495_8.png",
+            "link": "shopify://products/raspberry",
             "accent": "#b40e71"
           }
         },
         "flavor_FbW4qx": {
           "type": "flavor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle2495_9.png",
-            "link": "shopify:\/\/products\/chocolate-peppermint",
+            "title": "Chocolate Peppermint",
+            "image": "shopify://shop_images/Rectangle2495_9.png",
+            "link": "shopify://products/chocolate-peppermint",
             "accent": "#b02b32"
           }
         }
@@ -53,9 +67,10 @@
       ],
       "settings": {
         "subheading": "XXI Martinis",
-        "button_text": "Where to Buy",
-        "button_link": "shopify:\/\/pages\/where-to-buy",
-        "recipes_heading": "Perfect For:"
+        "button_text": "",
+        "button_link": "",
+        "recipes_heading": "Perfect For:",
+        "disclaimer": "<p>Your order is being fulfilled by a third-party retailer.</p>"
       }
     },
     "featured_collection_UiUPfR": {
@@ -65,50 +80,50 @@
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_7.png",
+            "image": "shopify://shop_images/Rectangle_2495_7.png",
             "title": "Espresso",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/espresso"
+            "link": "shopify://products/espresso"
           }
         },
         "flavor_dCb49U": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_8.png",
+            "image": "shopify://shop_images/Rectangle_2495_8.png",
             "title": "Raspberry",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/raspberry"
+            "link": "shopify://products/raspberry"
           }
         },
         "flavor_EiBayt": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_9.png",
+            "image": "shopify://shop_images/Rectangle_2495_9.png",
             "title": "Chocolate Peppermint",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/chocolate-peppermint"
+            "link": "shopify://products/chocolate-peppermint"
           }
         },
         "flavor_8dKC3q": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_5.png",
+            "image": "shopify://shop_images/Rectangle_2495_5.png",
             "title": "Peach",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/peach"
+            "link": "shopify://products/peach"
           }
         },
         "flavor_fhCBaH": {
           "type": "flavor",
           "settings": {
             "product": "",
-            "image": "shopify:\/\/shop_images\/Rectangle_2495_6.png",
+            "image": "shopify://shop_images/Rectangle_2495_6.png",
             "title": "Chocolate",
             "price": "$29.99",
-            "link": "shopify:\/\/products\/chocolate"
+            "link": "shopify://products/chocolate"
           }
         }
       },
@@ -123,7 +138,7 @@
         "heading": "Shop Our Other XXI Martini Products",
         "subheading": "Flavors for every occasion. Simply shake, pour, and sip. XXI always wins.",
         "button_text": "Browse All Flavors",
-        "button_link": "shopify:\/\/products\/raspberry"
+        "button_link": "shopify://collections/flavors"
       }
     },
     "1631306900414ab879": {
@@ -152,11 +167,11 @@
         "subheading": "Thirsty for more?",
         "message": "Ask for XXI at your favorite Restaurant, Bar, or Liquor Store",
         "button_text": "Find it near you",
-        "button_link": "shopify:\/\/pages\/where-to-buy",
+        "button_link": "shopify://pages/where-to-buy",
         "show_logo": false,
-        "image": "shopify:\/\/shop_images\/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
+        "image": "shopify://shop_images/11022021---XXI-Martinis-Launch-Day-2---LIFESTYLE15660-_1__crop.jpg",
         "show_video": false,
-        "vimeo_link": "https:\/\/player.vimeo.com\/external\/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
+        "vimeo_link": "https://player.vimeo.com/external/522075188.hd.mp4?s=6821fb727f41da6ca448dfbda869025f0230c396&profile_id=175",
         "loop_video": false
       }
     }
